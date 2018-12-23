@@ -28,8 +28,10 @@ No: ${msg.reactions.get('526209037361086526').count-1}`
     })
   
   await message.channel.send(`${message.author.tag} closed a poll`)
+  
+  msg.unpin()
 
-  msg.delete()
+  message.delete()
   
   doc.delete()
   

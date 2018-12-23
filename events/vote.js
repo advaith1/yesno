@@ -5,9 +5,9 @@ event.setEvent("messageReactionAdd")
 let vote
 
 event.code = (client, reaction, user) => {
+    
+  if(user.id===client.user.id) return
   
-  if(reaction.me) return
-
   if(reaction.emoji.id==='526209014254665759') { vote = 'Yes' }
   
   else if(reaction.emoji.id==='526209037361086526') { vote = 'No' }
