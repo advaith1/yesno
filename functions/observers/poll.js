@@ -17,7 +17,7 @@ Observer.code = async (client, message) => {
     if(!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) throw message.channel.send('I need the Embed Links permission!')
     if(!message.channel.permissionsFor(message.guild.me).has('MANAGE_MESSAGES')) throw message.channel.send('I need the Manage Messages permission!')
 
-    await message.channel.send(`${message.author.tag} just started a poll.`)
+    await message.channel.send(`${message.author.tag} started a poll`)
 
     let q = message.content.replace('<@526189797711151114> ', '').replace('<@!526189797711151114> ', '')
 
@@ -34,8 +34,6 @@ Observer.code = async (client, message) => {
 
     message.channel.lastMessage.delete()
     
-    message.delete()
-
     doc.set({
       'message': msg.id,
       'q': q
