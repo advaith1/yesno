@@ -2,19 +2,29 @@ const spark = require("sparkbots")
 const event = spark.event("vote")
 event.setEvent("messageReactionAdd")
 
-let vote
+const {db} = require('/app/db.js')
 
-event.code = (client, reaction, user) => {
-    
+
+event.code = async (client, reaction, user) => {
+  
+  const doc = db.collection('polls').doc(reaction.message.channel.id)
+
   if(user.id===client.user.id) return
   
-  if(reaction.emoji.id==='526209014254665759') { vote = 'Yes' }
+  if(reaction.emoji.id==='526209014254665759') {
   
-  else if(reaction.emoji.id==='526209037361086526') { vote = 'No' }
+    
+    const docx = await doc.get()
+    if(!docx.data()) return
+    
+    reaction.message.channel.send(`${user.tag} voted Yes`)
+  
+  }
+  
+  else if(reaction.emoji.id==='526209037361086526') {  }
   
   else return
-  
-  reaction.message.channel.send(`${user.tag} voted ${vote}`)
+
 
 }
 
