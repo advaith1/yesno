@@ -13,9 +13,11 @@ event.code = async (client, reaction, user) => {
   
   if(reaction.emoji.id==='526209014254665759') {
   
-    
     const docx = await doc.get()
+    
     if(!docx.data()) return
+    
+    if(docx.data().message!==reaction.message.id) return
     
     reaction.message.channel.send(`${user.tag} voted Yes`)
   
