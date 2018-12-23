@@ -11,7 +11,7 @@ Observer.code = async (client, message) => {
     
     const docx = await doc.get()
     
-    if(docx.data().message) return message.channel.send('A poll is currently open. Use `yn.close` to close it.')
+    if(docx.data()) return message.channel.send('A poll is currently open. Use `yn.close` to close it.')
     
     if(!message.channel.permissionsFor(message.guild.me).has('ADD_REACTIONS')) throw message.channel.send('I need the Add Reactions permission!')
     if(!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) throw message.channel.send('I need the Embed Links permission!')
@@ -33,6 +33,8 @@ Observer.code = async (client, message) => {
     await msg.pin()
 
     message.channel.lastMessage.delete()
+    
+    message.delete()
 
     doc.set({
       'message': msg.id,

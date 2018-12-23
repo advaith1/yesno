@@ -15,11 +15,19 @@ Command.code = async (client, message) => {
     
   if(!docx.data().message) return message.channel.send('Looks like there isn\'t a poll currently open.')
   
-  let msg = await message.channel.send({
+  await message.channel.messages.fetch(docx.data().message)
+  
+  const msg = await await message.channel.messages.fetch(docx.data().message)
+  
+  await message.channel.send({
       "embed": {
-        "title": `Poll Closed: ${docx.data().q}`
+        "title": `Poll Closed: ${docx.data().q}`,
+        "description": `Yes: ${msg.reactions.get('526209014254665759').count-1}
+No: ${msg.reactions.get('526209037361086526').count-1}`
       }
     })
+
+  msg.delete()
   
   doc.delete()
   
