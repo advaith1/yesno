@@ -19,7 +19,15 @@ event.code = async (client, reaction, user) => {
     
     if(docx.data().message!==reaction.message.id) return
     
-    reaction.message.channel.send(`${user.tag} voted Yes`)
+    if(!reaction.message.reactions.get('526209037361086526')) return reaction.message.channel.send('Looks like this poll does not have a No reaction on it, manually add one to fix.')
+    
+    if(reaction.message.reactions.get('526209037361086526').users.get(user.id)) {
+      
+      reaction.message.reactions.get('526209037361086526').users.remove(user.id)
+      
+      reaction.message.channel.send(`${user.tag} voted Yes`)
+      
+    } else reaction.message.channel.send(`${user.tag} voted Yes`)
   
   }
   
