@@ -25,13 +25,31 @@ event.code = async (client, reaction, user) => {
       
       reaction.message.reactions.get('526209037361086526').users.remove(user.id)
       
-      reaction.message.channel.send(`${user.tag} voted Yes`)
+      reaction.message.channel.send(`${user.tag} changed their vote from No to Yes`)
       
     } else reaction.message.channel.send(`${user.tag} voted Yes`)
   
   }
   
-  else if(reaction.emoji.id==='526209037361086526') {  }
+  else if(reaction.emoji.id==='526209037361086526') {
+  
+    const docx = await doc.get()
+    
+    if(!docx.data()) return
+    
+    if(docx.data().message!==reaction.message.id) return
+    
+    if(!reaction.message.reactions.get('526209014254665759')) return reaction.message.channel.send('Looks like this poll does not have a Yes reaction on it, manually add one to fix.')
+    
+    if(reaction.message.reactions.get('526209014254665759').users.get(user.id)) {
+      
+      reaction.message.reactions.get('526209014254665759').users.remove(user.id)
+      
+      reaction.message.channel.send(`${user.tag} changed their vote from Yes to No`)
+      
+    } else reaction.message.channel.send(`${user.tag} voted No`)
+  
+  }
   
   else return
 
