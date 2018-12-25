@@ -9,7 +9,7 @@ Command.code = (client, message) => {
   message.channel.send({
   "embed": {
     "title": "YesNo Help",
-    "description": "Moosic is a simple Discord Music bot by advaith.\n\nMoosic² is an add-on bot to Moosic that lets you play music in 2 servers at the same time! However, to support Moosic, you must be in the Moosic server and vote for Moosic on BFD to use Moosic².",
+    "description": `YesNo is a simple yes/no poll bot created by [advaith](https://advaith.fun). It is based on the YesNo bot built in to Google's [Allo]()`,
     "color": 45013
   }
 })
