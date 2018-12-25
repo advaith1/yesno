@@ -18,8 +18,8 @@ setInterval( async () => {
   client.user.setPresence({
           status: "online",
           activity: {
-            name: `music on ${client.guilds.size} servers | %help | moosic.co |upvotes on DBL`,
-            type: 0,
+            name: `polls on ${client.guilds.size} servers | yn.help`,
+            type: 3,
           }
         })
   
@@ -32,8 +32,8 @@ setInterval( async () => {
     client.user.setPresence({
           status: "online",
           activity: {
-            name: `music [JUST RESTARTED] on ${client.guilds.size} servers | %help | moosic.co | upvotes on DBL`,
-            type: 0,
+            name: `polls [JUST RESTARTED] on ${client.guilds.size} servers | yn.help`,
+            type: 3,
       }
   })
   
