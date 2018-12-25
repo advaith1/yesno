@@ -32,7 +32,7 @@ Observer.code = async (client, message) => {
 
     await msg.pin()
 
-    message.channel.lastMessage.delete()
+    await message.channel.lastMessage.delete()
     
     doc.set({
       'message': msg.id,

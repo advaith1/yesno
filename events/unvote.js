@@ -4,6 +4,7 @@ event.setEvent("messageReactionAdd")
 
 const {db} = require('/app/db.js')
 
+
 event.code = async (client, reaction, user) => {
   
   const doc = db.collection('polls').doc(reaction.message.channel.id)

@@ -8,6 +8,8 @@ module.exports = Command
 const {db} = require('/app/db.js')
 
 Command.code = async (client, message) => {
+  
+  try {
     
   const doc = db.collection('polls').doc(message.channel.id)
     
@@ -24,8 +26,8 @@ Command.code = async (client, message) => {
   await message.channel.send({
       "embed": {
         "title": `Poll Closed: ${docx.data().q}`,
-        "description": `Yes: ${msg.reactions.get('526209014254665759').count-1}
-No: ${msg.reactions.get('526209037361086526').count-1}`
+        "description": `Yes: ${msg.reactions.get('526209014254665759').users.size-1}
+No: ${msg.reactions.get('526209037361086526').users.size-1}`
       }
     })
   
@@ -36,5 +38,13 @@ No: ${msg.reactions.get('526209037361086526').count-1}`
   message.delete()
   
   doc.delete()
+    
+  } catch (e) {
+  
+    message.channel.send(`There was an error closing the poll: ${e}
+
+To force close the active poll use \`yn.forceclose\`.`)
+    
+  }
   
 }
