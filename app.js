@@ -4,4 +4,4 @@ Spark.start({
 prefix: 'yn.',
 token: process.env.TOKEN })
 
-require('./express.js')
+require('./web.js')
