@@ -1,9 +1,9 @@
-var Spark = require("sparkbots")
+const Spark = require("sparkbots")
 const Engine = Spark.engine("boot")
 module.exports = Engine
 
 Engine.code = (client, message) => {
   
-    //client.channels.get('424391556267769857').send('<:check:424361224675786752> Bot started up!')
+    client.channels.get('424391556267769857').send('<:check:424361224675786752> Bot started up!')
   
 }

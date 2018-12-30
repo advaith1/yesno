@@ -9,6 +9,8 @@ Engine.code = (client, message) => {
   db.collection('polls').get().then((snapshot) => {
       snapshot.forEach((doc) => {
         
+        if(!client.channels.get(doc.id)) return
+        
         client.channels.get(doc.id).messages.fetch(doc.data().message)
         
       })
