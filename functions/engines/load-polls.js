@@ -11,7 +11,7 @@ Engine.code = (client, message) => {
         
         if(!client.channels.get(doc.id)) return
         
-        client.channels.get(doc.id).messages.fetch(doc.data().message)
+        client.channels.get(doc.id).messages.fetch(doc.data().message).catch(e => {})
         
       })
   })
