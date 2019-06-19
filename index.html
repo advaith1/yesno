@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="has-background-black-bis">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YesNo</title>
+    <meta property="og:title" content="YesNo">
+		<meta property="og:locale" content="en_US">
+		<meta name="description" content="A simple Discord yes/no poll bot">
+		<meta property="og:description" content="A simple Discord yes/no poll bot">
+		<link rel="canonical" href="https://yesnosite.glitch.me">
+		<meta property="og:url" content="https://yesnosite.glitch.me">
+		<meta property="og:image" content="https://cdn.discordapp.com/avatars/526189797711151114/a9864357c703106bd1c935cde460fe4a.png?size=256">
+		<meta name="theme-color" content="#1e2781">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:creator" content="@advaithj1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/023f2dacc2.js" integrity="sha384-7cupKsyf1krt0hPaFhz7o347RIzmECgbuiiOTe+NbIi9eA5z8RSNuYFdTDgRTZHH" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="https://cdn.discordapp.com/avatars/526189797711151114/a9864357c703106bd1c935cde460fe4a.png?size=256">
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async>
+			new Crate({
+			  server: '398998849026261003',
+			  channel: '399069831820869632',
+			  shard: 'https://disweb.deploys.io'
+			})
+		</script>
+    <style>
+      * {
+        font-family: 'Comfortaa', sans-serif
+      }
+      a {
+        color: #209cee
+      }
+      a:hover {
+        color: white
+      }
+      code {
+        background-color: hsl(0, 0%, 14%);
+        color: white;
+        border-radius: 3px
+      }
+      html {
+        overflow: auto
+      }
+      .section {
+        padding-bottom: 0;
+      }
+      #addbtn {
+        background-color: #7289da
+      }
+      #addbtn:hover {
+        background-color: #667dce
+      }
+      @media screen and (min-width: 456px) {
+        #dblcomwidget {
+          height: 150px
+        }
+      }
+      
+    </style>
+  </head>
+  <body class="has-background-black-bis has-text-white">
+    <section class="hero is-primary is-bold" style="background-image: linear-gradient(141deg,#00e972 0, #1f2572 45%, #1f2572 50%, #1f2572 55%, #ff3b80 100%);">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+        <img src="https://cdn.discordapp.com/avatars/526189797711151114/a9864357c703106bd1c935cde460fe4a.png?size=256" width="128">
+        <h2 class="title">
+          YesNo
+        </h2>
+        <a class="button is-primary is-large" id="addbtn" target="_blank" rel="noopener" href="https://discordapp.com/api/oauth2/authorize?client_id=526189797711151114&scope=bot">
+          <span class="icon">
+            <i class="fab fa-discord"></i>
+          </span>
+          <span>Add to Discord</span>
+        </a>
+      </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <p class="has-text-white">
+          YesNo is a simple Discord yes/no poll bot for created by <a href="https://advaith.fun" target="_blank" rel="noopener">advaith</a>. It is based on the YesNo bot built in to <a href="https://allo.google.com" target="_blank" rel="noopener">Google Allo</a>, which shut down in March.
+        </p>
+      </div>
+  </section>
+    <section class="section">
+      <div class="container">
+        <p class="has-text-white">
+          YesNo is super easy to use and requires no setup. To create a poll, mention the bot (<code>@YesNo</code>) and ask the question. For example: <code>@YesNo is YesNo the best bot?</code>. Polls will be pinned to the channel so people can easily find them.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <p class="has-text-white">
+          You can close a poll (which will unpin it and send the results) by sending <code>yn.close</code>.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container has-text-centered">
+        <a target="_blank" rel="noopener" href="https://discordbots.org/bot/526189797711151114">
+          <img src="https://discordbots.org/api/widget/526189797711151114.svg" alt="Discord Bot List">
+        </a>
+        <a target="_blank" rel="noopener" href="https://discordbotlist.com/bots/526189797711151114">
+          <img id="dblcomwidget" src="https://discordbotlist.com/bots/526189797711151114/widget" alt="Discord Bot List">
+        </a>
+        <a target="_blank" rel="noopener" href="https://botlist.space/bot/526189797711151114">
+          <img style="max-height: 150px; border-radius: 5px" src="https://botlist.space/bot/526189797711151114/widget/7" alt="botlist.space">
+        </a>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <p class="has-text-white">
+          © 2019 Advaith Jagathesan
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container has-text-centered">
+        <a href="https://battleforthenet.com" target="_blank" rel="noopener">
+          <img style="max-height: 80px; max-width: 100%" src="https://www.battleforthenet.com/media/banners/970x90%20BIG%20CABLE.png">
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
