@@ -14,7 +14,7 @@ Engine.code = (client, message) => {
     'discordbots.group': process.env.dbg,
     'discordsbestbots.xyz': process.env.dbb,
     'discordbots.org': process.env.dbl
-  }, 1)
+  }, 3)
   
   // Bots On Discord has a ratelimit of 2 mins
   blapi.handle(client, {
