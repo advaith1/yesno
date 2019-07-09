@@ -4,29 +4,28 @@
   "//3": "updating this file will download and update your packages",
   "name": "moosic",
   "version": "0.0.1",
-  "description": "A simple Discord music bot",
+  "description": "A simple Discord poll bot",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
     "sparkbots": "github:advaith1/Spark-djs12#Stable",
-    "node-opus": "^0.3.1",
+    "node-opus": "^0.3.2",
     "express": "^4.16.4",
     "firebase-admin": "^6.4.0",
-    "bufferutil": "^4.0.0",
-    "libsodium-wrappers": "^0.7.3",
+    "bufferutil": "^4.0.1",
+    "libsodium-wrappers": "^0.7.4",
     "sodium": "^3.0.2",
     "zlib-sync": "^0.1.4",
     "@firebase/app-types": "^0.3.2",
-    "@discordjs/uws": "^10.149.0",
-    "erlpack": "discordapp/erlpack"
+    "@discordjs/uws": "^11.149.1",
+    "erlpack": "discordapp/erlpack",
+    "blapi": "^1.1.0",
+    "jaczfetch": "github:MrJacz/jaczfetch"
   },
   "engines": {
     "node": "11.x"
-  },
-  "repository": {
-    "url": "https://github.com/advaith1/moosic"
   },
   "license": "MIT",
   "keywords": [
