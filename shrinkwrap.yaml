@@ -1,23 +1,25 @@
 dependencies:
-  '@discordjs/uws': 10.149.0
+  '@discordjs/uws': 11.149.1
   '@firebase/app-types': 0.3.2
-  bufferutil: 4.0.0
+  blapi: 1.1.0
+  bufferutil: 4.0.1
   erlpack: github.com/discordapp/erlpack/674ebfd3439ba4b7ce616709821d27630f7cdc61
   express: 4.16.4
   firebase-admin: 6.4.0
-  libsodium-wrappers: 0.7.3
-  node-opus: 0.3.1
+  jaczfetch: github.com/MrJacz/jaczfetch/3794dbfc2de72c4b9a2761570e830d8bd5550871
+  libsodium-wrappers: 0.7.4
+  node-opus: 0.3.2
   sodium: 3.0.2
   sparkbots: github.com/advaith1/Spark-djs12/e579af303aea029e482b6d56b893907eaca270b4
   zlib-sync: 0.1.4
 packages:
-  /@discordjs/uws/10.149.0:
+  /@discordjs/uws/11.149.1:
     dev: false
     engines:
       node: '>=6.0.0'
     requiresBuild: true
     resolution:
-      integrity: sha512-N1wjoAD2DOgzevqzyTOWTgyO2divX03JWNQx4JHm/jQ/BRzZNkhwVRO3RC5Guww+srdgs4Tw4gwrzlJrlOhq/Q==
+      integrity: sha512-TmbwZaeXDSCq0ckmf2q10Fkt1220gu9AZJ/UvtQjsi2jyJDjy0i0OwL4/eb3vc9Cwr0mpC9EbfzltQ2si0qUiQ==
   /@firebase/app-types/0.3.2:
     dev: false
     resolution:
@@ -429,6 +431,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-i47mqjF9UbjxJhxGf+pZ6kSxrnI3wBLlnGI2ArWJ4r0VrvDS7ZYXkprq/pLaBWYq4GM0r4zdHY+NNRqEMU7uew==
+  /bindings/1.5.0:
+    dependencies:
+      file-uri-to-path: 1.0.0
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
+  /blapi/1.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-IaLTwh8ARaDRfa/CF1Rm0zr3q+Z3Jl6bJwvPkRaTlLVJiiuhYQ8RgJI1Itz5cVw5AKkp25TdtQKpwGNI8820sw==
   /blob/0.0.5:
     dev: false
     resolution:
@@ -471,13 +484,13 @@ packages:
     optional: true
     resolution:
       integrity: sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
-  /bufferutil/4.0.0:
+  /bufferutil/4.0.1:
     dependencies:
-      node-gyp-build: 3.4.0
+      node-gyp-build: 3.7.0
     dev: false
     requiresBuild: true
     resolution:
-      integrity: sha512-jpnqMVLo7sqfUY2W92RC4jjj9TuiOSkjB0k43TxPcrBSntZwXUOl8Krfd3eVEdApuScpSTwYKntm/dXU2T8gnw==
+      integrity: sha512-xowrxvpxojqkagPcWRQVXZl0YXhRhAtBEIq3VoER1NH5Mw1n1o0ojdspp+GS2J//2gCVyrzQDApQ4unGF+QOoA==
   /bun/0.0.12:
     dependencies:
       readable-stream: 1.0.34
@@ -575,10 +588,10 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-brWl9y6vOB1xYPZcpZde3N9zDByXTosAeMDo4p1wzo6UMOX4vumB+TP1RZ76sfE6Md68Q0NJSrE/gbezd4Ul+w==
-  /commander/2.19.0:
+  /commander/2.20.0:
     dev: false
     resolution:
-      integrity: sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
+      integrity: sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
   /component-bind/1.0.0:
     dev: false
     resolution:
@@ -909,6 +922,11 @@ packages:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-8O/hjE9W5PQK/H4Gxxn9XuYYjzg=
+  /file-uri-to-path/1.0.0:
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
   /finalhandler/1.1.1:
     dependencies:
       debug: 2.6.9
@@ -1402,16 +1420,16 @@ packages:
     optional: true
     resolution:
       integrity: sha1-MIrMr6C8SDo4Z7S28rlQYlHRuDU=
-  /libsodium-wrappers/0.7.3:
+  /libsodium-wrappers/0.7.4:
     dependencies:
-      libsodium: 0.7.3
+      libsodium: 0.7.4
     dev: false
     resolution:
-      integrity: sha512-dw5Jh6TZ5qc5rQVZe3JrSO/J05CE+DmAPnqD7Q2glBUE969xZ6o3fchnUxyPlp6ss3x0MFxmdJntveFN+XTg1g==
-  /libsodium/0.7.3:
+      integrity: sha512-axKkW01L0q+urLeE7UMSZKWwk4LrRbi6s5pjKBAvbgDBYnsSaolK1oN/Syilm1dqJFkJQNi6qodwOp8dzSoc9Q==
+  /libsodium/0.7.4:
     dev: false
     resolution:
-      integrity: sha512-ld+deUNqSsZYbAobUs63UyduPq8ICp/Ul/5lbvBIYpuSNWpPRU0PIxbW+xXipVZtuopR6fIz9e0tTnNuPMNeqw==
+      integrity: sha512-fTU3vUdrxQzhPAAjmTSqKk4LzYbR0OtcYjp1P92AlH50JIxXZFEIXWh1yryCmU6RLGfwS2IzBdZjbmpYf/TlyQ==
   /lodash.at/4.6.0:
     dev: false
     optional: true
@@ -1584,6 +1602,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-JY7V6lRkStKcKTvHO5NVSQRv+RV+FIL5pvDoLiAtSL9pKlC5x9PKQcZDsq7m4FO4d57mkhC6Z+QhAh3Jdk5JFw==
+  /nan/2.14.0:
+    dev: false
+    resolution:
+      integrity: sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
   /negotiator/0.6.1:
     dev: false
     engines:
@@ -1609,24 +1631,24 @@ packages:
     optional: true
     resolution:
       integrity: sha512-sol30LUpz1jQFBjOKwbjxijiE3b6pjd74YwfD0fJOKPjF+fONKb2Yg8rYgS6+bK6VDl+/wfr4IYpC7jDzLUIfw==
-  /node-gyp-build/3.4.0:
+  /node-gyp-build/3.7.0:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-YoviGBJYGrPdLOKDIQB0sKxuKy/EEsxzooNkOZak4vSTKT/qH0Pa6dj3t1MJjEQGsefih61IyHDmO1WW7xOFfw==
-  /node-opus/0.3.1:
+      integrity: sha512-L/Eg02Epx6Si2NXmedx+Okg+4UHqmaf3TNcxd50SF9NQGcJaON3AtU++kax69XV7YWz4tUspqZSAsVofhFKG2w==
+  /node-opus/0.3.2:
     dependencies:
       bindings: 1.2.1
-      commander: 2.19.0
-      nan: 2.12.1
+      commander: 2.20.0
+      nan: 2.14.0
     dev: false
     engines:
       node: '>=5.10.0'
     optionalDependencies:
-      ogg-packet: 1.0.0
+      ogg-packet: 1.0.1
     requiresBuild: true
     resolution:
-      integrity: sha512-1Cb8OvHhdDspVfeKMjEgbedJabyE1Ib6OcN2BMEsRCU7FIsciuBpOErcie3y0qTf83nclPAY+kBU3Oj+U+oRlQ==
+      integrity: sha512-o7hKgNncfbgF1j25lCK7cPqs9DEMroP3LWW0BMb/Ismc33cXo7LcaLqS0+/VV+NOotIy43fb7juLg6akflzBEw==
   /number-is-nan/1.0.1:
     dev: false
     engines:
@@ -1642,13 +1664,13 @@ packages:
     dev: false
     resolution:
       integrity: sha1-8MaapQ78lbhmwYb0AKM3acsvEpE=
-  /ogg-packet/1.0.0:
+  /ogg-packet/1.0.1:
     dependencies:
       ref-struct: 1.1.0
     dev: false
     optional: true
     resolution:
-      integrity: sha1-RbiFchrI991c8iOR1CEGrlM6xng=
+      integrity: sha512-dW1ok3BMnMikyXGDIgVEckWnlViW8JLWQV4qj9aN/rNRVqHlDYSlcIEtSIMH7tpuUOiIxAhY3+OxNdIOm6s17A==
   /on-finished/2.3.0:
     dependencies:
       ee-first: 1.1.1
@@ -1880,9 +1902,9 @@ packages:
       integrity: sha1-XV7mWtQc78Olxf60BYcmHkee3BM=
   /ref/1.3.5:
     dependencies:
-      bindings: 1.3.1
+      bindings: 1.5.0
       debug: 2.6.9
-      nan: 2.12.1
+      nan: 2.14.0
     dev: false
     optional: true
     requiresBuild: true
@@ -2433,6 +2455,12 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-DRy+RONKzy/J6skNmq8ZBXtVAIoB4qbun+FCChlSlEvF7s9LJ0wzUXjVwl4tQ/jYT8V+LPzCg/sTcRj4E0g0fQ==
+  github.com/MrJacz/jaczfetch/3794dbfc2de72c4b9a2761570e830d8bd5550871:
+    dev: false
+    name: jaczfetch
+    resolution:
+      tarball: 'https://codeload.github.com/MrJacz/jaczfetch/tar.gz/3794dbfc2de72c4b9a2761570e830d8bd5550871'
+    version: 1.0.0
   github.com/advaith1/Spark-djs12/e579af303aea029e482b6d56b893907eaca270b4:
     dependencies:
       chalk: 2.4.1
@@ -2462,6 +2490,7 @@ packages:
     name: erlpack
     requiresBuild: true
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/discordapp/erlpack/tar.gz/674ebfd3439ba4b7ce616709821d27630f7cdc61'
     version: 0.1.0
   github.com/discordjs/discord.js/21ec03140f182b93ddc151e9edbdb6da8d8ae703:
@@ -2492,14 +2521,16 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  '@discordjs/uws': ^10.149.0
+  '@discordjs/uws': ^11.149.1
   '@firebase/app-types': ^0.3.2
-  bufferutil: ^4.0.0
+  blapi: ^1.1.0
+  bufferutil: ^4.0.1
   erlpack: 'github:discordapp/erlpack'
   express: ^4.16.4
   firebase-admin: ^6.4.0
-  libsodium-wrappers: ^0.7.3
-  node-opus: ^0.3.1
+  jaczfetch: 'github:MrJacz/jaczfetch'
+  libsodium-wrappers: ^0.7.4
+  node-opus: ^0.3.2
   sodium: ^3.0.2
   sparkbots: 'github:advaith1/Spark-djs12#Stable'
   zlib-sync: ^0.1.4
