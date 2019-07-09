@@ -6,9 +6,7 @@ const blapi = require('blapi')
 const fetch = require('jaczfetch')
 
 Engine.code = (client, message) => {
-    
-  blapi.setLogging(true)
-  
+      
   blapi.handle(client, {
     'botlist.space': process.env.bls,
     'discordbots.group': process.env.dbg,
