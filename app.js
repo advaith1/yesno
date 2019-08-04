@@ -1,7 +1,9 @@
 const Spark = require("sparkbots")
 
 Spark.start({
-prefix: 'yn.',
-token: process.env.TOKEN })
+    prefix: 'yn.',
+    ignoreBots: true,
+    token: process.env.TOKEN
+})
 
 require('./web.js')
