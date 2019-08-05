@@ -8,19 +8,15 @@ const fetch = require('jaczfetch')
 Engine.code = (client, message) => {
       
   try {
-    /*
+    
     blapi.handle(client, {
       'botlist.space': process.env.bls,
       'discordbots.group': process.env.dbg,
       'discordsbestbots.xyz': process.env.dbb,
-      'discordbots.org': process.env.dbl
-    }, 3).catch(console.error)
-    
-    // Bots On Discord has a ratelimit of 2 mins
-    blapi.handle(client, {
+      'discordbots.org': process.env.dbl,
       'bots.ondiscord.xyz': process.env.bod
-    }, 2).catch(console.error)
-    */
+    }, 3)
+    
     // discordbotlist.com accepts more data
     setInterval(() => {
         fetch.post(`https://discordbotlist.com/api/bots/${client.user.id}/stats`)
