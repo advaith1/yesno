@@ -14,7 +14,8 @@ Engine.code = (client, message) => {
       'discordbots.group': process.env.dbg,
       'discordsbestbots.xyz': process.env.dbb,
       'discordbots.org': process.env.dbl,
-      'bots.ondiscord.xyz': process.env.bod
+      'bots.ondiscord.xyz': process.env.bod,
+      'botsfordiscord.com': process.env.bfd
     }, 3)
     
     // discordbotlist.com accepts more data
