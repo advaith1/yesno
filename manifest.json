@@ -1,0 +1,41 @@
+{
+    "short_name": "YesNo",
+    "name": "YesNo",
+    "icons": [
+      {
+        "src": "https://cdn.discordapp.com/avatars/526189797711151114/a9864357c703106bd1c935cde460fe4a.webp?size=512",
+        "type": "image/webp",
+        "sizes": "512x512"
+      },
+      {
+        "src": "https://cdn.discordapp.com/avatars/526189797711151114/a9864357c703106bd1c935cde460fe4a.png?size=512",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "https://cdn.discordapp.com/avatars/526189797711151114/a9864357c703106bd1c935cde460fe4a.webp?size=256",
+        "type": "image/webp",
+        "sizes": "256x256"
+      },
+      {
+        "src": "https://cdn.discordapp.com/avatars/526189797711151114/a9864357c703106bd1c935cde460fe4a.png?size=256",
+        "type": "image/png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "https://cdn.discordapp.com/avatars/526189797711151114/a9864357c703106bd1c935cde460fe4a.webp",
+        "type": "image/webp",
+        "sizes": "128x128"
+      },
+      {
+        "src": "https://cdn.discordapp.com/avatars/526189797711151114/a9864357c703106bd1c935cde460fe4a.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#121212",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#1e2781"
+  }
