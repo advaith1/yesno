@@ -11,7 +11,6 @@ Engine.code = (client, message) => {
     
     blapi.handle(client, {
       'botlist.space': process.env.bls,
-      'discordbots.group': process.env.dbg,
       'discordsbestbots.xyz': process.env.dbb,
       'discordbots.org': process.env.dbl,
       'bots.ondiscord.xyz': process.env.bod,
