@@ -4,6 +4,6 @@ module.exports = Engine
 
 Engine.code = (client, message) => {
   
-    client.channels.get('424391556267769857').send('<:check:424361224675786752> Bot started up!')
+    client.channels.resolve('424391556267769857').send('<:check:424361224675786752> Bot started up!')
   
 }

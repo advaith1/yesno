@@ -10,19 +10,20 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "sparkbots": "github:advaith1/Spark-djs12#Stable",
-    "node-opus": "^0.3.2",
-    "express": "^4.16.4",
-    "firebase-admin": "^6.4.0",
+    "@firebase/app-types": "^0.5.1",
+    "blapi": "^1.2.6",
     "bufferutil": "^4.0.1",
-    "libsodium-wrappers": "^0.7.4",
+    "discord.js": "github:discordjs/discord.js",
+    "erlpack": "github:discordapp/erlpack",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.9.2",
+    "libsodium-wrappers": "^0.7.5",
+    "node-opus": "^0.3.2",
+    "snekfetch": "^4.0.4",
     "sodium": "^3.0.2",
-    "zlib-sync": "^0.1.4",
-    "@firebase/app-types": "^0.3.2",
-    "@discordjs/uws": "^11.149.1",
-    "erlpack": "discordapp/erlpack",
-    "blapi": "^1.1.0",
-    "jaczfetch": "github:MrJacz/jaczfetch"
+    "sparkbots": "github:advaith1/Spark-djs12#Stable",
+    "zlib-sync": "^0.1.6",
+    "utf-8-validate": "^5.0.2"
   },
   "engines": {
     "node": "10.x"

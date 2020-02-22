@@ -3,7 +3,7 @@ const Engine = Spark.engine("botlists")
 module.exports = Engine
 
 const blapi = require('blapi')
-const fetch = require('jaczfetch')
+const fetch = require('snekfetch')
 
 Engine.code = (client, message) => {
       
