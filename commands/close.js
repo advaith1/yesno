@@ -26,8 +26,8 @@ Command.code = async (client, message) => {
   await message.channel.send({
       "embed": {
         "title": `Poll Closed: ${docx.data().q}`,
-        "description": `Yes: ${msg.reactions.get('526209014254665759').users.size-1}
-No: ${msg.reactions.get('526209037361086526').users.size-1}`
+        "description": `Yes: ${msg.reactions.resolve('526209014254665759').count-1}
+No: ${msg.reactions.resolve('526209037361086526').count-1}`
       }
     })
   

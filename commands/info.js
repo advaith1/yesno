@@ -61,12 +61,12 @@ Command.code = (client, message) => {
       },
       {
         "name": "Server Count",
-        "value": client.guilds.size,
+        "value": client.guilds.cache.size,
         "inline": true
       },
       {
         "name": "User Count",
-        "value": client.users.size,
+        "value": client.users.cache.size,
         "inline": true
       },
       {

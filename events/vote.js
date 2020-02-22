@@ -18,11 +18,11 @@ event.code = async (client, reaction, user) => {
     
     if(docx.data().message!==reaction.message.id) return
     
-    if(!reaction.message.reactions.get('526209037361086526')) return reaction.message.channel.send('Looks like this poll does not have a No reaction on it, manually add one to fix.')
+    if(!reaction.message.reactions.resolve('526209037361086526')) return reaction.message.channel.send('Looks like this poll does not have a No reaction on it, manually add one to fix.')
     
-    if(reaction.message.reactions.get('526209037361086526').users.get(user.id)) {
+    if(reaction.message.reactions.resolve('526209037361086526').users.resolve(user.id)) {
       
-      reaction.message.reactions.get('526209037361086526').users.remove(user.id)
+      reaction.message.reactions.resolve('526209037361086526').users.remove(user.id)
       
       reaction.message.channel.send(`${user.tag} changed their vote from No to Yes`)
       
@@ -38,11 +38,11 @@ event.code = async (client, reaction, user) => {
     
     if(docx.data().message!==reaction.message.id) return
     
-    if(!reaction.message.reactions.get('526209014254665759')) return reaction.message.channel.send('Looks like this poll does not have a Yes reaction on it, manually add one to fix.')
+    if(!reaction.message.reactions.resolve('526209014254665759')) return reaction.message.channel.send('Looks like this poll does not have a Yes reaction on it, manually add one to fix.')
     
-    if(reaction.message.reactions.get('526209014254665759').users.get(user.id)) {
+    if(reaction.message.reactions.resolve('526209014254665759').users.resolve(user.id)) {
       
-      reaction.message.reactions.get('526209014254665759').users.remove(user.id)
+      reaction.message.reactions.resolve('526209014254665759').users.remove(user.id)
       
       reaction.message.channel.send(`${user.tag} changed their vote from Yes to No`)
       
