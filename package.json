@@ -5,7 +5,7 @@
   "name": "moosic",
   "version": "0.0.1",
   "description": "A simple Discord poll bot",
-  "main": "app.js",
+  "main": "app.ts",
   "scripts": {
     "start": "ts-node app.ts"
   },
@@ -14,11 +14,11 @@
     "blapi": "^1.2.6",
     "bufferutil": "^4.0.1",
     "discord.js": "github:discordjs/discord.js",
+    "dotenv": "^8.2.0",
     "erlpack": "github:discordapp/erlpack",
     "express": "^4.17.1",
     "firebase-admin": "^8.9.2",
     "libsodium-wrappers": "^0.7.5",
-    "node-opus": "^0.3.2",
     "snekfetch": "^4.0.4",
     "sodium": "^3.0.2",
     "sparkbots": "github:advaith1/Spark-djs12#Stable",
@@ -26,6 +26,9 @@
     "zlib-sync": "^0.1.6"
   },
   "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.7.4",
+    "@types/snekfetch": "^4.0.2",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.2"
   },

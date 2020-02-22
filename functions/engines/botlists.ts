@@ -1,14 +1,15 @@
-const Spark = require("sparkbots")
-const Engine = Spark.engine("botlists")
-module.exports = Engine
+import {engine} from 'sparkbots'
+import {Client} from 'discord.js'
+const Engine = engine("botlists")
+export = Engine
 
-const blapi = require('blapi')
-const fetch = require('snekfetch')
+import * as blapi from 'blapi'
+import * as fetch from 'snekfetch'
 
-Engine.code = (client, message) => {
+Engine.code = (client: Client) => {
       
   try {
-    
+    /*
     blapi.handle(client, {
       'botlist.space': process.env.bls,
       'discordsbestbots.xyz': process.env.dbb,
@@ -18,11 +19,12 @@ Engine.code = (client, message) => {
       'discordextremelist.xyz': process.env.del,
       'discord.bots.gg': process.env.dbgg
     }, 3)
-    
+    */
     // discordbotlist.com accepts more data
     setInterval(() => {
         fetch.post(`https://discordbotlist.com/api/bots/${client.user.id}/stats`)
           .set('Authorization', 'Bot '+process.env.dblc)
+          // @ts-ignore
           .send({ guilds: client.guilds.cache.size, users: client.users.cache.size })
           .catch(error => console.error(error))
     }, 60000)

@@ -1,5 +1,4 @@
-const http = require('http')
-const express = require('express')
+import * as express from 'express'
 const app = express()
 
 app.get("/", (request, response) => {
@@ -9,7 +8,3 @@ app.get("/", (request, response) => {
 })
 
 app.listen(process.env.PORT)
-
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);

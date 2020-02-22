@@ -1,13 +1,14 @@
-const Spark = require("sparkbots")
-const Command = Spark.command("stats")
+import {command} from 'sparkbots'
+import {Message} from 'discord.js'
+const Command = command("stats")
 Command.setLevel(0)
 Command.allowDms(true)
 Command.setDescription('close a poll')
-module.exports = Command
+export = Command
 
-const {db} = require('/app/db.js')
+import {db} from '../db'
 
-Command.code = async (client, message) => {
+Command.code = async (client, message: Message) => {
     
   const doc = db.collection('polls').doc(message.channel.id)
     
@@ -19,7 +20,7 @@ Command.code = async (client, message) => {
   
   await message.channel.messages.fetch(docx.data().message)
   
-  const msg = await await message.channel.messages.fetch(docx.data().message)
+  const msg = await message.channel.messages.fetch(docx.data().message)
   
   msg.reactions.resolve('526209014254665759')
   msg.reactions.resolve('526209037361086526')

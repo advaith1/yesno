@@ -1,9 +1,10 @@
-const Spark = require("sparkbots")
-const Observer = Spark.observer("poll")
+import {observer} from 'sparkbots'
+import {Message, TextChannel} from 'discord.js'
+const Observer = observer("poll")
 
-const {db} = require('/app/db.js')
+import {db} from '../../db'
 
-Observer.code = async (client, message) => {
+Observer.code = async (client, message: Message) => {
   
   if(message.content.startsWith('<@526189797711151114> ') || message.content.startsWith('<@!526189797711151114> ')) {
     
@@ -13,9 +14,9 @@ Observer.code = async (client, message) => {
     
     if(docx.data()) return message.channel.send('A poll is currently open. Use `yn.close` to close it.')
     
-    if(!message.channel.permissionsFor(message.guild.me).has('ADD_REACTIONS')) throw message.channel.send('I need the Add Reactions permission!')
-    if(!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) throw message.channel.send('I need the Embed Links permission!')
-    if(!message.channel.permissionsFor(message.guild.me).has('MANAGE_MESSAGES')) throw message.channel.send('I need the Manage Messages permission!')
+    if(!(message.channel as TextChannel).permissionsFor(message.guild.me).has('ADD_REACTIONS')) throw message.channel.send('I need the Add Reactions permission!')
+    if(!(message.channel as TextChannel).permissionsFor(message.guild.me).has('EMBED_LINKS')) throw message.channel.send('I need the Embed Links permission!')
+    if(!(message.channel as TextChannel).permissionsFor(message.guild.me).has('MANAGE_MESSAGES')) throw message.channel.send('I need the Manage Messages permission!')
 
     await message.channel.send(`${message.author.tag} started a poll`)
 
@@ -42,4 +43,4 @@ Observer.code = async (client, message) => {
   }
 }
 
-module.exports = Observer
+export = Observer

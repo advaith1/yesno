@@ -1,11 +1,12 @@
-const Spark = require("sparkbots")
-const Command = Spark.command("ping")
+import {command} from 'sparkbots'
+import {Message} from 'discord.js'
+const Command = command("ping")
 Command.setLevel(0)
 Command.allowDms(true)
 Command.setDescription('Ping pong')
-module.exports = Command;
+export = Command
 
-Command.code = (client, message) => {
+Command.code = (client, message: Message) => {
     var start = new Date().getTime()
     message.channel.send("Pinging...").then((message) => {
         var end = new Date().getTime()

@@ -1,4 +1,4 @@
-const admin = require('firebase-admin');
+import * as admin from 'firebase-admin'
 
 const serviceAccount = require('./FIRESTORE.json')
 
@@ -11,4 +11,4 @@ admin.firestore().settings({timestampsInSnapshots: true})
 
 const db = admin.firestore()
 
-module.exports.db = db
+export {db}

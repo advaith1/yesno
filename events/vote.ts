@@ -1,10 +1,11 @@
-const spark = require("sparkbots")
-const event = spark.event("vote")
-event.setEvent("messageReactionAdd")
+import {event} from 'sparkbots'
+import {Client, MessageReaction, User} from 'discord.js'
+const Event = event("vote")
+Event.setEvent("messageReactionAdd")
 
-const {db} = require('/app/db.js')
+import {db} from '../db'
 
-event.code = async (client, reaction, user) => {
+Event.code = async (client: Client, reaction: MessageReaction, user: User) => {
   
   const doc = db.collection('polls').doc(reaction.message.channel.id)
 
@@ -55,4 +56,4 @@ event.code = async (client, reaction, user) => {
 
 }
 
-module.exports = event
+export = Event

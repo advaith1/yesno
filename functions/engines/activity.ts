@@ -1,8 +1,9 @@
-var Spark = require("sparkbots")
-const Engine = Spark.engine("activity")
-module.exports = Engine
+import {engine} from 'sparkbots'
+import {Client} from 'discord.js'
+const Engine = engine("activity")
+export = Engine
 
-Engine.code = async (client, message) => {
+Engine.code = async (client: Client) => {
   
     //runs every minute
 setInterval( async () => {
@@ -11,6 +12,7 @@ setInterval( async () => {
   client.user.setPresence({
           status: "online",
           activity: {
+            // @ts-ignore
             name: `polls on ${client.guilds.cache.size} servers | yn.help`,
             type: 3,
           }
@@ -23,6 +25,7 @@ setInterval( async () => {
     client.user.setPresence({
           status: "online",
           activity: {
+            // @ts-ignore
             name: `polls [JUST RESTARTED] on ${client.guilds.cache.size} servers | yn.help`,
             type: 3,
       }

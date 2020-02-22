@@ -1,10 +1,11 @@
-const Spark = require("sparkbots")
-const Command = Spark.command("help")
+import {command} from 'sparkbots'
+import {Message} from 'discord.js'
+const Command = command("help")
 Command.setLevel(0)
 Command.allowDms(true)
-module.exports = Command;
+export = Command
 
-Command.code = (client, message) => {
+Command.code = (client, message: Message) => {
 
   message.channel.send({
   "embed": {

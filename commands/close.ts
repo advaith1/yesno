@@ -1,13 +1,14 @@
-const Spark = require("sparkbots")
-const Command = Spark.command("close")
+import {command} from 'sparkbots'
+import {Message} from 'discord.js'
+const Command = command("close")
 Command.setLevel(0)
 Command.allowDms(true)
 Command.setDescription('close a poll')
-module.exports = Command
+export = Command
 
-const {db} = require('/app/db.js')
+import {db} from '../db'
 
-Command.code = async (client, message) => {
+Command.code = async (client, message: Message) => {
   
   try {
     
