@@ -1,4 +1,4 @@
-const Spark = require("sparkbots")
+import Spark 
 
 Spark.start({
     prefix: 'yn.',

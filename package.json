@@ -7,7 +7,7 @@
   "description": "A simple Discord poll bot",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "ts-node app.ts"
   },
   "dependencies": {
     "@firebase/app-types": "^0.5.1",
@@ -22,8 +22,12 @@
     "snekfetch": "^4.0.4",
     "sodium": "^3.0.2",
     "sparkbots": "github:advaith1/Spark-djs12#Stable",
-    "zlib-sync": "^0.1.6",
-    "utf-8-validate": "^5.0.2"
+    "utf-8-validate": "^5.0.2",
+    "zlib-sync": "^0.1.6"
+  },
+  "devDependencies": {
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
   },
   "engines": {
     "node": "10.x"
