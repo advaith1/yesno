@@ -23,7 +23,7 @@ Engine.code = (client, message) => {
     setInterval(() => {
         fetch.post(`https://discordbotlist.com/api/bots/${client.user.id}/stats`)
           .set('Authorization', 'Bot '+process.env.dblc)
-          .send({ guilds: client.guilds.size, users: client.users.size })
+          .send({ guilds: client.guilds.cache.size, users: client.users.cache.size })
           .catch(error => console.error(error))
     }, 60000)
 
