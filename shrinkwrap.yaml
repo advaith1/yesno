@@ -10,7 +10,7 @@ dependencies:
   node-opus: 0.3.3
   snekfetch: 4.0.4
   sodium: 3.0.2
-  sparkbots: github.com/advaith1/Spark-djs12/21361f9e31b7ae8488db0d81e1ffd0121118ed83
+  sparkbots: github.com/advaith1/Spark-djs12/8d5e6cfcdc07f0fd9fe03be9107c1d13c88ce82f
   utf-8-validate: 5.0.2
   zlib-sync: 0.1.6
 devDependencies:
@@ -2489,7 +2489,7 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-B2XGrhlXs/izEks+705vn/aL+nWyPgnS1glyCeH8wgZdOvztRn3ZEdqclj6GoJSeA/iRSqaTlznG2KO1M/GuWg==
-  github.com/advaith1/Spark-djs12/21361f9e31b7ae8488db0d81e1ffd0121118ed83:
+  github.com/advaith1/Spark-djs12/8d5e6cfcdc07f0fd9fe03be9107c1d13c88ce82f:
     dependencies:
       chalk: 2.4.2
       fs-extra: 5.0.0
@@ -2502,7 +2502,7 @@ packages:
       discord.js: 12.0.0-dev
     resolution:
       registry: 'https://registry.npmjs.org/'
-      tarball: 'https://codeload.github.com/advaith1/Spark-djs12/tar.gz/21361f9e31b7ae8488db0d81e1ffd0121118ed83'
+      tarball: 'https://codeload.github.com/advaith1/Spark-djs12/tar.gz/8d5e6cfcdc07f0fd9fe03be9107c1d13c88ce82f'
     version: 0.1.0
   github.com/discordapp/erlpack/5d0064f9e106841e1eead711a6451f99b0d289fd:
     dependencies:
