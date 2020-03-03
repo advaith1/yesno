@@ -22,14 +22,14 @@ Command.code = async (client, message: Message) => {
   
   const msg = await message.channel.messages.fetch(docx.data().message)
   
-  msg.reactions.resolve('526209014254665759')
-  msg.reactions.resolve('526209037361086526')
+  msg.reactions.cache.get('526209014254665759')
+  msg.reactions.cache.get('526209037361086526')
   
   await message.channel.send({
       "embed": {
         "title": `Poll Stats: ${docx.data().q}`,
-        "description": `Yes: ${msg.reactions.resolve('526209014254665759').count-1}
-No: ${msg.reactions.resolve('526209037361086526').count-1}`
+        "description": `Yes: ${msg.reactions.cache.get('526209014254665759').count-1}
+No: ${msg.reactions.cache.get('526209037361086526').count-1}`
       }
     })
   

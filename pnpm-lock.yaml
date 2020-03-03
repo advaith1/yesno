@@ -1,12 +1,12 @@
 dependencies:
-  '@firebase/app-types': 0.5.1
-  blapi: 1.2.6
+  blapi: 1.2.8
   bufferutil: 4.0.1
-  discord.js: github.com/discordjs/discord.js/f6075a6e3ac31674b66546481dfeae62329dc6cc_8dc4a901247921e90918719dfdf698e0
+  datadog-metrics: 0.8.1
+  discord.js: github.com/discordjs/discord.js/713309e7bb87b10ca7432fdbbd7ca65fcddd4882_8dc4a901247921e90918719dfdf698e0
   dotenv: 8.2.0
   erlpack: github.com/discordapp/erlpack/5d0064f9e106841e1eead711a6451f99b0d289fd
   express: 4.17.1
-  firebase-admin: 8.9.2_@firebase+app-types@0.5.1
+  firebase-admin: 8.9.2_@firebase+app-types@0.5.2
   libsodium-wrappers: 0.7.6
   snekfetch: 4.0.4
   sodium: 3.0.2
@@ -14,24 +14,29 @@ dependencies:
   utf-8-validate: 5.0.2
   zlib-sync: 0.1.6
 devDependencies:
+  '@discordjs/collection': 0.1.5
+  '@firebase/app-types': 0.5.2
+  '@types/datadog-metrics': 0.6.0
   '@types/express': 4.17.2
-  '@types/node': 13.7.4
+  '@types/node': 13.7.7
   '@types/snekfetch': 4.0.2
-  ts-node: 8.6.2_typescript@3.8.2
-  typescript: 3.8.2
+  ts-node: 8.6.2_typescript@3.8.3
+  typescript: 3.8.3
 lockfileVersion: 5.1
 packages:
-  /@discordjs/collection/0.1.4:
-    dev: false
+  /@discordjs/collection/0.1.5:
     resolution:
-      integrity: sha512-AwCjNahVqASGv5mxnZCC0DfcV/hkAV/U7edUB0K+20xx7v0ZfQ3/o02bNROzpNjvfak5pM8KO5SCmJVK90e3lQ==
+      integrity: sha512-CU1q0UXQUpFNzNB7gufgoisDHP7n+T3tkqTsp3MNUkVJ5+hS3BCvME8uCXAUFlz+6T2FbTCu75A+yQ7HMKqRKw==
   /@firebase/app-types/0.5.1:
     dev: false
     resolution:
       integrity: sha512-fhe4KxEoRLD596tuIkvBXVHedVByI5ALzf5nMraOXsnBxLY0gKcMSXQGwwPxZyeUt/S1VM8DRVXOg9shegEO7g==
-  /@firebase/auth-interop-types/0.1.2_61fcb114deaf83dca8fc9e56da71b2e0:
+  /@firebase/app-types/0.5.2:
+    resolution:
+      integrity: sha512-k3zRi9gXyWrymu8OL6DA1Pz7eo+sKVBopX5ouOjQwozAZ55WhelifPC99WHmLWo8sAokNM0XDyzM7loOA5yliQ==
+  /@firebase/auth-interop-types/0.1.2_e528596503416cf7f078e879cc841bc2:
     dependencies:
-      '@firebase/app-types': 0.5.1
+      '@firebase/app-types': 0.5.2
       '@firebase/util': 0.2.40
     dev: false
     peerDependencies:
@@ -52,9 +57,9 @@ packages:
     dev: false
     resolution:
       integrity: sha512-+SiBjnufVhRSJg078feQWH7yHQncRjX+23NUgvBCRFXNBwUVvmPenNXYhCpF8XbhSOrC7BvfcRZTGqeI7+ZUdg==
-  /@firebase/database/0.5.21_@firebase+app-types@0.5.1:
+  /@firebase/database/0.5.21_@firebase+app-types@0.5.2:
     dependencies:
-      '@firebase/auth-interop-types': 0.1.2_61fcb114deaf83dca8fc9e56da71b2e0
+      '@firebase/auth-interop-types': 0.1.2_e528596503416cf7f078e879cc841bc2
       '@firebase/component': 0.1.5
       '@firebase/database-types': 0.4.11
       '@firebase/logger': 0.1.35
@@ -252,6 +257,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-2+FrkXY4zllzTNfJth7jOqEHC+enpLeGslEhpnTAkg21GkRrWV4SsAtqchtT4YS9/nODBU2/ZfsBY2X4J/dX7A==
+  /@types/datadog-metrics/0.6.0:
+    dev: true
+    resolution:
+      integrity: sha512-MBOPUAvG6xRSgQaOtdEUnF1qwx0JGTjTVhKPzw9a3C9hguaWMNM3KUjRJMRlkgjw8AhV56IXfl2cQH9Tqd5ydA==
   /@types/express-serve-static-core/4.17.2:
     dependencies:
       '@types/node': 13.7.4
@@ -291,6 +300,10 @@ packages:
   /@types/node/13.7.4:
     resolution:
       integrity: sha512-oVeL12C6gQS/GAExndigSaLxTrKpQPxewx9bOcwfvJiJge4rr7wNaph4J+ns5hrmIV2as5qxqN8YKthn9qh0jw==
+  /@types/node/13.7.7:
+    dev: true
+    resolution:
+      integrity: sha512-Uo4chgKbnPNlxQwoFmYIwctkQVkMMmsAoGGU4JKwLuvBefF0pCq4FybNSnfkfRCpC7ZW7kttcC/TrRtAJsvGtg==
   /@types/node/8.10.59:
     dev: false
     resolution:
@@ -433,6 +446,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-QIZrnhueC1W0gYlDEeaPr/rrxSI=
+  /bignumber.js/1.1.1:
+    dev: false
+    resolution:
+      integrity: sha1-GkFdmsAUwTJWrx/u2dGj5XF6jPc=
   /bignumber.js/7.2.1:
     dev: false
     optional: true
@@ -444,12 +461,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
-  /blapi/1.2.6:
+  /blapi/1.2.8:
     dependencies:
       node-fetch: 2.6.0
     dev: false
     resolution:
-      integrity: sha512-/FkZgEWjTIto8Qx6kOZTn5I+QnvFaaC0Usl5NSU2LZ3EjnCzudWb0mh5h+XTDLVopwAHdS5fQXg2ZgVMVFD0Yw==
+      integrity: sha512-k/kc7/O9r2rDrpPH2NmAddheTCcgB6jMwEbsF6qOcD1uQQTvqiwssw2MwI/sE5F1qJH5p1qrSuwQaue3H4JLWQ==
   /blob/0.0.5:
     dev: false
     resolution:
@@ -621,6 +638,13 @@ packages:
       node: '>=0.10'
     resolution:
       integrity: sha1-hTz6D3y+L+1d4gMmuN1YEDX24vA=
+  /datadog-metrics/0.8.1:
+    dependencies:
+      debug: 3.1.0
+      dogapi: 1.1.0
+    dev: false
+    resolution:
+      integrity: sha512-qTSKnddO6GxTJW9FYpmWjvvift3qfyMurDjwNjJnJhBk76pBdDhC0B5V9V+XwPdn4r42qu48kwXNuHJslXlDOA==
   /date-and-time/0.12.0:
     dev: false
     optional: true
@@ -662,6 +686,12 @@ packages:
     optional: true
     resolution:
       integrity: sha512-7Et6r6XfNW61CPPCIYfm1YPGSmh6+CliYeL4km7GWJcpX5LTAflGF8drLLR+MZX+2P3NZfAfSduutBbSWqER4g==
+  /deep-extend/0.6.0:
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==
   /define-properties/1.1.3:
     dependencies:
       object-keys: 1.1.1
@@ -701,6 +731,16 @@ packages:
       node: '>=0.3.1'
     resolution:
       integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
+  /dogapi/1.1.0:
+    dependencies:
+      extend: 3.0.2
+      json-bigint: 0.1.4
+      minimist: 1.2.0
+      rc: 1.2.8
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha1-caQ4Za1LtMsYvD4Tz3aZcfUBAwo=
   /dot-prop/5.2.0:
     dependencies:
       is-obj: 2.0.0
@@ -948,9 +988,9 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-aAWcW57uxVNrQZqFXjITpW3sIUQmHGG3qSb9mUah9MgMC4NeWhNOlNjXEYq3HjRAvL6arUviZGGJsBg6z0zsWA==
-  /firebase-admin/8.9.2_@firebase+app-types@0.5.1:
+  /firebase-admin/8.9.2_@firebase+app-types@0.5.2:
     dependencies:
-      '@firebase/database': 0.5.21_@firebase+app-types@0.5.1
+      '@firebase/database': 0.5.21_@firebase+app-types@0.5.2
       '@types/node': 8.10.59
       dicer: 0.3.0
       jsonwebtoken: 8.1.0
@@ -979,16 +1019,16 @@ packages:
       node: '>= 0.12'
     resolution:
       integrity: sha512-1lLKB2Mu3aGP1Q/2eCOx0fNbRMe7XdwktwOruhfqqd0rIJWwN4Dh+E3hrPSlDCXnSR7UtZ1N38rVXm+6+MEhJQ==
-  /form-data/2.5.1:
+  /form-data/3.0.0:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.26
     dev: false
     engines:
-      node: '>= 0.12'
+      node: '>= 6'
     resolution:
-      integrity: sha512-m21N3WOmEEURgk6B9GLOE4RuWOFf28Lhh9qGYeNlGq4VDXUlJy2th2slBNU8Gp8EzloYZOibZJ7t5ecIrFSjVA==
+      integrity: sha512-CKMFDglpbMi6PyN+brwB9Q/GOw0eAnsrEZDgcsH5Krhz5Od/haKHAX0NmQfha2zPPz0JpWzA7GJHGSnvCRLWsg==
   /forwarded/0.1.2:
     dev: false
     engines:
@@ -1271,6 +1311,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+  /ini/1.3.5:
+    dev: false
+    resolution:
+      integrity: sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
   /ipaddr.js/1.9.0:
     dev: false
     engines:
@@ -1407,6 +1451,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-peZUwuWi3rXyAdls77yoDA7y9RM=
+  /json-bigint/0.1.4:
+    dependencies:
+      bignumber.js: 1.1.1
+    dev: false
+    resolution:
+      integrity: sha1-tdQLipAJ6S8Vf3wHnbCXABgw4B4=
   /json-bigint/0.3.0:
     dependencies:
       bignumber.js: 7.2.1
@@ -1627,6 +1677,10 @@ packages:
     optional: true
     resolution:
       integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==
+  /minimist/1.2.0:
+    dev: false
+    resolution:
+      integrity: sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
   /ms/2.0.0:
     dev: false
     resolution:
@@ -1780,7 +1834,7 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
-  /prism-media/1.2.0:
+  /prism-media/1.2.1:
     dev: false
     peerDependencies:
       '@discordjs/opus': ^0.1.0
@@ -1797,7 +1851,7 @@ packages:
       opusscript:
         optional: true
     resolution:
-      integrity: sha512-zjcO/BLVlfxWqFpEUlDyL1R9XXMquasNP4xpeYDPPZi/Zcz0i6OXoqcvxOLgbRVPsJXVd29vlYmRx2bts+hzEw==
+      integrity: sha512-R3EbKwJiYlTvGwcG1DpUt+06DsxOGS5W4AMEHT7oVOjG93MjpdhGX1whHyjnqknylLMupKAsKMEXcTNRbPe6Vw==
   /process-nextick-args/2.0.1:
     dev: false
     optional: true
@@ -1889,6 +1943,16 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-4Oz8DUIwdvoa5qMJelxipzi/iJIi40O5cGV1wNYp5hvZP8ZN0T+jiNkL0QepXs+EsQ9XJ8ipEDoiH70ySUJP3Q==
+  /rc/1.2.8:
+    dependencies:
+      deep-extend: 0.6.0
+      ini: 1.3.5
+      minimist: 1.2.0
+      strip-json-comments: 2.0.1
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==
   /readable-stream/2.3.7:
     dependencies:
       core-util-is: 1.0.2
@@ -2194,6 +2258,12 @@ packages:
     optional: true
     resolution:
       integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==
+  /strip-json-comments/2.0.1:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=
   /stubs/3.0.0:
     dev: false
     optional: true
@@ -2252,13 +2322,13 @@ packages:
       node: '>=0.8'
     resolution:
       integrity: sha512-nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==
-  /ts-node/8.6.2_typescript@3.8.2:
+  /ts-node/8.6.2_typescript@3.8.3:
     dependencies:
       arg: 4.1.3
       diff: 4.0.2
       make-error: 1.3.6
       source-map-support: 0.5.16
-      typescript: 3.8.2
+      typescript: 3.8.3
       yn: 3.1.1
     dev: true
     engines:
@@ -2307,13 +2377,13 @@ packages:
     optional: true
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-  /typescript/3.8.2:
+  /typescript/3.8.3:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-EgOVgL/4xfVrCMbhYKUQTdF37SQn4Iw73H5BgCrF1Abdun7Kwy/QZsE/ssAy0y4LxBbvua3PIbFsbRczWWnDdQ==
+      integrity: sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
   /unique-string/2.0.0:
     dependencies:
       crypto-random-string: 2.0.0
@@ -2506,7 +2576,7 @@ packages:
   github.com/advaith1/Spark-djs12/8d5e6cfcdc07f0fd9fe03be9107c1d13c88ce82f_discord.js@12.0.0-dev:
     dependencies:
       chalk: 2.4.2
-      discord.js: github.com/discordjs/discord.js/f6075a6e3ac31674b66546481dfeae62329dc6cc_8dc4a901247921e90918719dfdf698e0
+      discord.js: github.com/discordjs/discord.js/713309e7bb87b10ca7432fdbbd7ca65fcddd4882_8dc4a901247921e90918719dfdf698e0
       fs-extra: 5.0.0
       request: 2.88.2
       request-promise: 4.2.5_request@2.88.2
@@ -2531,16 +2601,16 @@ packages:
       registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/discordapp/erlpack/tar.gz/5d0064f9e106841e1eead711a6451f99b0d289fd'
     version: 0.1.3
-  github.com/discordjs/discord.js/f6075a6e3ac31674b66546481dfeae62329dc6cc_8dc4a901247921e90918719dfdf698e0:
+  github.com/discordjs/discord.js/713309e7bb87b10ca7432fdbbd7ca65fcddd4882_8dc4a901247921e90918719dfdf698e0:
     dependencies:
-      '@discordjs/collection': 0.1.4
+      '@discordjs/collection': 0.1.5
       abort-controller: 3.0.0
       bufferutil: 4.0.1
       erlpack: github.com/discordapp/erlpack/5d0064f9e106841e1eead711a6451f99b0d289fd
-      form-data: 2.5.1
+      form-data: 3.0.0
       libsodium-wrappers: 0.7.6
       node-fetch: 2.6.0
-      prism-media: 1.2.0
+      prism-media: 1.2.1
       setimmediate: 1.0.5
       sodium: 3.0.2
       tweetnacl: 1.0.3
@@ -2549,13 +2619,13 @@ packages:
       zlib-sync: 0.1.6
     dev: false
     engines:
-      node: '>=10.2.0'
-    id: github.com/discordjs/discord.js/f6075a6e3ac31674b66546481dfeae62329dc6cc
+      node: '>=12.0.0'
+    id: github.com/discordjs/discord.js/713309e7bb87b10ca7432fdbbd7ca65fcddd4882
     name: discord.js
     peerDependencies:
       bufferutil: ^4.0.1
       erlpack: discordapp/erlpack
-      libsodium-wrappers: ^0.7.4
+      libsodium-wrappers: ^0.7.6
       sodium: ^3.0.2
       utf-8-validate: ^5.0.2
       zlib-sync: ^0.1.6
@@ -2574,15 +2644,18 @@ packages:
         optional: true
     resolution:
       registry: 'https://registry.npmjs.org/'
-      tarball: 'https://codeload.github.com/discordjs/discord.js/tar.gz/f6075a6e3ac31674b66546481dfeae62329dc6cc'
+      tarball: 'https://codeload.github.com/discordjs/discord.js/tar.gz/713309e7bb87b10ca7432fdbbd7ca65fcddd4882'
     version: 12.0.0-dev
 specifiers:
-  '@firebase/app-types': ^0.5.1
+  '@discordjs/collection': ^0.1.5
+  '@firebase/app-types': ^0.5.2
+  '@types/datadog-metrics': ^0.6.0
   '@types/express': ^4.17.2
-  '@types/node': ^13.7.4
+  '@types/node': ^13.7.7
   '@types/snekfetch': ^4.0.2
-  blapi: ^1.2.6
+  blapi: ^1.2.8
   bufferutil: ^4.0.1
+  datadog-metrics: ^0.8.1
   discord.js: 'github:discordjs/discord.js'
   dotenv: ^8.2.0
   erlpack: 'github:discordapp/erlpack'
@@ -2593,6 +2666,6 @@ specifiers:
   sodium: ^3.0.2
   sparkbots: 'github:advaith1/Spark-djs12#Stable'
   ts-node: ^8.6.2
-  typescript: ^3.8.2
+  typescript: ^3.8.3
   utf-8-validate: ^5.0.2
   zlib-sync: ^0.1.6

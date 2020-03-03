@@ -1,5 +1,5 @@
 import {observer} from 'sparkbots'
-import {Message, TextChannel} from 'discord.js'
+import {Message, DMChannel} from 'discord.js'
 const Observer = observer("poll")
 
 import {db} from '../../db'
@@ -8,15 +8,17 @@ Observer.code = async (client, message: Message) => {
   
   if(message.content.startsWith('<@526189797711151114> ') || message.content.startsWith('<@!526189797711151114> ')) {
     
+    if(message.channel instanceof DMChannel) return message.channel.send('<:no:424361302069346304> You cannot create polls in DMs, please try it in a server.')
+
     const doc = db.collection('polls').doc(message.channel.id)
     
     const docx = await doc.get()
     
     if(docx.data()) return message.channel.send('A poll is currently open. Use `yn.close` to close it.')
     
-    if(!(message.channel as TextChannel).permissionsFor(message.guild.me).has('ADD_REACTIONS')) throw message.channel.send('I need the Add Reactions permission!')
-    if(!(message.channel as TextChannel).permissionsFor(message.guild.me).has('EMBED_LINKS')) throw message.channel.send('I need the Embed Links permission!')
-    if(!(message.channel as TextChannel).permissionsFor(message.guild.me).has('MANAGE_MESSAGES')) throw message.channel.send('I need the Manage Messages permission!')
+    if(!message.channel.permissionsFor(message.guild.me).has('ADD_REACTIONS')) throw message.channel.send('I need the Add Reactions permission!')
+    if(!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) throw message.channel.send('I need the Embed Links permission!')
+    if(!message.channel.permissionsFor(message.guild.me).has('MANAGE_MESSAGES')) throw message.channel.send('I need the Manage Messages permission!')
 
     await message.channel.send(`${message.author.tag} started a poll`)
 

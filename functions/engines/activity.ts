@@ -10,9 +10,8 @@ setInterval( async () => {
   
   //updates status: Watching x servers
   client.user.setPresence({
-          status: "online",
+          status: 'online',
           activity: {
-            // @ts-ignore
             name: `polls on ${client.guilds.cache.size} servers | yn.help`,
             type: 3,
           }
@@ -23,9 +22,8 @@ setInterval( async () => {
   
   // Sets status on boot
     client.user.setPresence({
-          status: "online",
+          status: 'idle',
           activity: {
-            // @ts-ignore
             name: `polls [JUST RESTARTED] on ${client.guilds.cache.size} servers | yn.help`,
             type: 3,
       }

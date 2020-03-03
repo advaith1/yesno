@@ -1,12 +1,12 @@
-import {command} from 'sparkbots'
-import {Message} from 'discord.js'
-const Command = command("eval")
+import * as Spark from 'sparkbots'
+import * as Discord from 'discord.js'
+const Command = Spark.command("eval")
 Command.setLevel(10)
 Command.allowDms(true)
 Command.setDescription('**Aliases**: none\n**Description**: Evals js code\n**Arguments**: Code to eval (required)\n**Example**: `!!eval message.reply(\'hi\')`')
 module.exports = Command;
 
-Command.code = (client, message: Message) => {
+Command.code = (client, message: Discord.Message) => {
     const clean = text => {
         if (typeof(text) === "string")
             return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));

@@ -11,20 +11,27 @@ Engine.code = (client: Client) => {
   db.collection('polls').get().then((snapshot) => {
       snapshot.forEach(async (doc) => {
         
+        let channel = client.channels.cache.get(doc.id)
+
         // Cancel if channel isn't found
-        if(!client.channels.resolve(doc.id)) return
+        if(!channel) return
+
+        if(!(channel instanceof TextChannel)) return
         
         // Fetch message
-        await (client.channels.resolve(doc.id) as TextChannel).messages.fetch(doc.data().message).catch(e => {})
+        await channel.messages.fetch(doc.data().message).catch(e => {})
 
         // Cancel if message isn't found
-        if(!(client.channels.resolve(doc.id) as TextChannel).messages.resolve(doc.data().message)) return
+        if(!channel.messages.cache.get(doc.data().message)) return
+
+        if(!channel.messages.cache.get(doc.data().message).reactions.cache.get('526209014254665759')) return console.log(`No Yes reaction: Channel ${doc.id}, Message ${doc.data().message}`)
+        if(!channel.messages.cache.get(doc.data().message).reactions.cache.get('526209037361086526')) return console.log(`No No reaction: Channel ${doc.id}, Message ${doc.data().message}`)
 
         // Fetch yes reactions
-        (client.channels.resolve(doc.id) as TextChannel).messages.resolve(doc.data().message).reactions.resolve('526209014254665759').users.fetch().catch(e => console.error(e));
+        channel.messages.cache.get(doc.data().message).reactions.cache.get('526209014254665759').users.fetch().catch(e => console.error(e));
 
         // Fetch no reactions
-        (client.channels.resolve(doc.id) as TextChannel).messages.resolve(doc.data().message).reactions.resolve('526209037361086526').users.fetch().catch(e => console.error(e))
+        channel.messages.cache.get(doc.data().message).reactions.cache.get('526209037361086526').users.fetch().catch(e => console.error(e))
       })
   })
   
