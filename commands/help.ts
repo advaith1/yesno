@@ -14,10 +14,13 @@ Command.code = (client, message: Message) => {
 
 YesNo is super easy to use and requires no setup. To create a poll, mention the bot (\`@YesNo\`) and ask the question. For example: \`@YesNo is YesNo the best bot?\`. Polls will be pinned to the channel so people can easily find them.
 
-You can close a poll (which will unpin it and send the results) by sending \`yn.close\`.`,
+You can close a poll (which will unpin it and send the results) by sending \`yn.close\`.
+
+[<:yn_website:692120145430052875> Website](https://yesno.advaith.fun) | [<:yn_support:692120146227232799> Support Server](https://discord.gg/9QhkP4) | [<:yn_add:692120145685905522> Add to your server](https://discordapp.com/oauth2/authorize?client_id=526189797711151114&scope=bot&response_type=code) | **[<:yn_vote:692120145421795328> Vote](https://botsfordiscord.com/bot/526189797711151114/vote)** | [<:yn_review:692120145916723211> Review](https://bots.ondiscord.xyz/bots/526189797711151114/review)
+​`,
     "color": 2041985,
     "footer": {
-      "text": "The YesNo name, logo, and concept are by Google. This bot is not affiliated with Google."
+      "text": "The YesNo name, logo design, and concept are by Google. This bot is not affiliated with Google."
     },
   }
 })
