@@ -21,7 +21,7 @@ Event.code = async (client: Client, reaction: MessageReaction, user: User) => {
     
     if(!reaction.message.reactions.cache.get('526209037361086526')) return reaction.message.channel.send('Looks like this poll does not have a No reaction on it, manually add one to fix.')
     
-    if(!reaction.message.reactions.cache.get('526209037361086526').users.cache.get(user.id)) reaction.message.channel.send(`${user.tag} removed their vote`)
+    if(!reaction.message.reactions.cache.get('526209037361086526').users.cache.get(user.id)) reaction.message.channel.send(`${user} removed their vote`, {allowedMentions: {parse: []}})
   
   }
   
@@ -35,7 +35,7 @@ Event.code = async (client: Client, reaction: MessageReaction, user: User) => {
     
     if(!reaction.message.reactions.cache.get('526209014254665759')) return reaction.message.channel.send('Looks like this poll does not have a Yes reaction on it, manually add one to fix.')
     
-    if(!reaction.message.reactions.cache.get('526209014254665759').users.cache.get(user.id)) reaction.message.channel.send(`${user.tag} removed their vote`)
+    if(!reaction.message.reactions.cache.get('526209014254665759').users.cache.get(user.id)) reaction.message.channel.send(`${user} removed their vote`, {allowedMentions: {parse: []}})
   
   }
   

@@ -11,6 +11,7 @@ start({
   ignoreBots: true,
   token: process.env.TOKEN,
   clientOptions: {
+    partials: ['USER'],
     shards: 'auto',
     ws: {
       large_threshold: 50,

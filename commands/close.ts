@@ -32,7 +32,7 @@ No: ${msg.reactions.cache.get('526209037361086526').count-1}`
       }
     })
   
-  await message.channel.send(`${message.author.tag} closed a poll`)
+  await message.channel.send(`${message.author} closed a poll`, {allowedMentions: {parse: []}})
   
   msg.unpin()
 

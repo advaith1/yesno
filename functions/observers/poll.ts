@@ -20,7 +20,7 @@ Observer.code = async (client, message: Message) => {
     if(!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) throw message.channel.send('I need the Embed Links permission!')
     if(!message.channel.permissionsFor(message.guild.me).has('MANAGE_MESSAGES')) throw message.channel.send('I need the Manage Messages permission!')
 
-    await message.channel.send(`${message.author.tag} started a poll`)
+    await message.channel.send(`${message.author} started a poll`, {allowedMentions: {parse: []}})
 
     let q = message.content.replace('<@526189797711151114> ', '').replace('<@!526189797711151114> ', '')
 

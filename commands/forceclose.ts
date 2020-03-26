@@ -18,7 +18,7 @@ Command.code = async (client, message: Message) => {
     
   if(!docx.data().message) return message.channel.send('Looks like there isn\'t a poll currently open.')
     
-  await message.channel.send(`${message.author.tag} force closed a poll`)
+  await message.channel.send(`${message.author} force closed a poll`, {allowedMentions: {parse: []}})
   
   doc.delete()
   
