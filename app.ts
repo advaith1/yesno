@@ -1,8 +1,8 @@
 const result = require('dotenv').config({path: __dirname + '/.env'})
 
-if (result.error) {
+if (result.error)
   throw result.error
-}
+
 
 import {start} from 'sparkbots'
 

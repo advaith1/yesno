@@ -7,16 +7,15 @@ Command.setDescription('Ping pong')
 export = Command
 
 Command.code = (client, message: Message) => {
-    var start = new Date().getTime()
+    let start = new Date().getTime()
     message.channel.send("Pinging...").then((message) => {
-        var end = new Date().getTime()
+        let end = new Date().getTime()
         message.edit(":ping_pong: Pong! Took **" + (end - start) + "**ms");
     })
   
-  // Permission check
-    if(message.guild){
-       if(!message.guild.me.hasPermission('EMBED_LINKS')){
-          message.channel.send(':warning: I don\'t have the `Embed Links` permission! I need this to run most commands.')
-       }
+    // Permission check
+    if(message.guild && !message.guild.me.hasPermission('EMBED_LINKS')){
+        message.channel.send(':warning: I don\'t have the `Embed Links` permission! I need this to run most commands.')
     }
+
 }
