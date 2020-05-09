@@ -22,7 +22,7 @@ Observer.code = async (_client, message: Message) => {
 
     await message.channel.send(`${message.author} started a poll`, {allowedMentions: {parse: []}})
 
-    let q = message.content.replace('<@526189797711151114> ', '').replace('<@!526189797711151114> ', '')
+    let q = message.cleanContent.split(' ').slice(1).join(' ')
     let q2 = ''
     const oq = q
 
