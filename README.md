@@ -1,6 +1,6 @@
 # YesNo
 
-![status](https://botlist.space/bot/526189797711151114/badge?property=status) ![servers](https://botlist.space/bot/526189797711151114/badge?property=servers) ![chat](https://img.shields.io/discord/398998849026261003?color=%237289DA&logo=discord&logoColor=white)
+![status](https://botlist.space/bot/526189797711151114/badge?property=status) ![servers](https://botlist.space/bot/526189797711151114/badge?property=servers) [![chat](https://img.shields.io/discord/398998849026261003?color=%237289DA&logo=discord&logoColor=white)](https://img.shields.io/discord/398998849026261003?color=%237289DA&logo=discord&logoColor=white)
 
 YesNo is a simple Discord yes/no poll bot for created by advaith. It is based on the YesNo bot built in to Google Allo, which shut down in March 2019.
 
