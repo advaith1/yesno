@@ -20,4 +20,4 @@ Tokens are loaded from a `.env` file: `TOKEN` is the Discord bot token, `PORT` i
 
 The Cloud Firestore service account JSON file should be in `FIRESTORE.json`.
 
-Self-hosting YesNo is not recommended, but please don't make a public clone.
+Self-hosting YesNo is not recommended, and please don't make a public clone.
