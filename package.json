@@ -30,7 +30,7 @@
     "@types/node": "^13.13.5",
     "@types/snekfetch": "^4.0.2",
     "ts-node": "^8.10.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.1-rc"
   },
   "engines": {
     "node": "13.x"
