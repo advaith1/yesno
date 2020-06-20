@@ -3,32 +3,32 @@
     "name": "YesNo",
     "icons": [
       {
-        "src": "https://cdn.discordapp.com/avatars/526189797711151114/f6697181a69d0295afa1572d7774540a.webp?size=512",
+        "src": "https://yesno.advaith.io/images/logo-512.webp",
         "type": "image/webp",
         "sizes": "512x512"
       },
       {
-        "src": "https://cdn.discordapp.com/avatars/526189797711151114/f6697181a69d0295afa1572d7774540a.png?size=512",
+        "src": "https://yesno.advaith.io/images/logo-512.png",
         "type": "image/png",
         "sizes": "512x512"
       },
       {
-        "src": "https://cdn.discordapp.com/avatars/526189797711151114/f6697181a69d0295afa1572d7774540a.webp?size=256",
+        "src": "https://yesno.advaith.io/images/logo-256.webp",
         "type": "image/webp",
         "sizes": "256x256"
       },
       {
-        "src": "https://cdn.discordapp.com/avatars/526189797711151114/f6697181a69d0295afa1572d7774540a.png?size=256",
+        "src": "https://yesno.advaith.io/images/logo-256.png",
         "type": "image/png",
         "sizes": "256x256"
       },
       {
-        "src": "https://cdn.discordapp.com/avatars/526189797711151114/f6697181a69d0295afa1572d7774540a.webp",
+        "src": "https://yesno.advaith.io/images/logo-128.webp",
         "type": "image/webp",
         "sizes": "128x128"
       },
       {
-        "src": "https://cdn.discordapp.com/avatars/526189797711151114/f6697181a69d0295afa1572d7774540a.png",
+        "src": "https://yesno.advaith.io/images/logo-128.png",
         "type": "image/png",
         "sizes": "128x128"
       }
