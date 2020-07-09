@@ -14,7 +14,7 @@ Engine.code = (client: Client) => {
       'botsfordiscord.com': process.env.bfd,
       'discordextremelist.xyz': process.env.del,
       'discord.bots.gg': process.env.dbgg,
-      'discordbotlist.com': 'Bot '+process.env.dblc,
+      'discordbotlist.com': process.env.dblc,
       'discord.boats': process.env.dboats
     }, 3)
 
