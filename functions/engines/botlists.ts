@@ -3,12 +3,12 @@ import {Client} from 'discord.js'
 const Engine = engine("botlists")
 export = Engine
 
-import * as blapi from 'blapi'
+import {handle} from 'blapi'
 
 Engine.code = (client: Client) => {
       
   try {
-    blapi.handle(client, {
+    handle(client, {
       'botlist.space': process.env.bls,
       'bots.ondiscord.xyz': process.env.bod,
       'botsfordiscord.com': process.env.bfd,

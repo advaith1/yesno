@@ -1,5 +1,5 @@
-import * as Spark from 'sparkbots'
-import * as Discord from 'discord.js'
+import Spark from 'sparkbots'
+import Discord from 'discord.js'
 const Command = Spark.command("eval")
 Command.setLevel(10)
 Command.allowDms(true)

@@ -1,7 +1,7 @@
 declare module 'sparkbots' {
     import { ClientOptions, Snowflake, MessageEmbed } from 'discord.js'
-    import * as DataStore from 'sparkbots/src/dataStore'
-    import * as CustomConfig from 'sparkbots/src/CustomConfig'
+    import DataStore from 'sparkbots/src/dataStore'
+    import CustomConfig from 'sparkbots/src/CustomConfig'
     const version : string
     const DataStore: DataStore
     const methods: {RichEmbed: MessageEmbed, MessageEmbed: MessageEmbed}
