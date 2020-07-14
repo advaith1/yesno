@@ -3,6 +3,7 @@ import {Message, DMChannel} from 'discord.js'
 const Observer = observer("poll")
 
 import {db} from '../../db'
+import {yes, no} from '../../emojis.json'
 
 Observer.code = async (_client, message: Message) => {
   
@@ -38,8 +39,8 @@ Observer.code = async (_client, message: Message) => {
       }
     })
 
-    await msg.react('526209014254665759')
-    await msg.react('526209037361086526')
+    await msg.react(yes)
+    await msg.react(no)
 
     await msg.pin()
 

@@ -10,7 +10,7 @@ start({
   clientOptions: {
     shards: 'auto',
     messageCacheMaxSize: 10,
-    partials: ['USER'],
+    partials: ['USER', 'MESSAGE', 'REACTION'],
     ws: {
       large_threshold: 50,
       intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGES']

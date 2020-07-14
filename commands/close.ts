@@ -7,6 +7,8 @@ Command.setDescription('close a poll')
 export = Command
 
 import {db} from '../db'
+import {yes, no} from '../emojis.json'
+
 
 Command.code = async (client, message: Message) => {
   
@@ -41,8 +43,8 @@ Command.code = async (client, message: Message) => {
   await message.channel.send({
       "embed": {
         "title": `Poll Closed: ${q}`,
-        "description": `<:yes:424361224675786752> Yes: ${msg.reactions.cache.get('526209014254665759').count-1}
-<:no:424361302069346304> No: ${msg.reactions.cache.get('526209037361086526').count-1}
+        "description": `<:yes:424361224675786752> Yes: ${msg.reactions.cache.get(yes).count-1}
+<:no:424361302069346304> No: ${msg.reactions.cache.get(no).count-1}
 [Poll Message](https://discord.com/channels/${message.guild.id}/${message.channel.id}/${msg.id})${votemsg}`
       }
     })
