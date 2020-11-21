@@ -4,7 +4,7 @@
 
 YesNo is a simple Discord yes/no poll bot for created by advaith. It is based on the YesNo bot built in to Google Allo, which shut down in March 2019.
 
-[Website](https://yesno.advaith.fun) | [Add to Discord](https://discord.com/oauth2/authorize?client_id=526189797711151114&scope=bot&response_type=code)
+[Website](https://yesno.advaith.io) | [Add to Discord](https://discord.com/api/oauth2/authorize?client_id=526189797711151114&scope=bot&response_type=code)
 
 ## Using YesNo
 
