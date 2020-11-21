@@ -31,9 +31,9 @@ Event.code = async (client: Client, reaction: MessageReaction, user: User) => {
       
       reaction.message.reactions.cache.get(no).users.remove(user.id)
       
-      reaction.message.channel.send(`${user} changed their vote from No to Yes`, {allowedMentions: {parse: []}})
+      reaction.message.channel.send(`${user} (${user.tag}) changed their vote from No to Yes`, {allowedMentions: {parse: []}})
       
-    } else reaction.message.channel.send(`${user} voted Yes`, {allowedMentions: {parse: []}})
+    } else reaction.message.channel.send(`${user} (${user.tag}) voted Yes`, {allowedMentions: {parse: []}})
   
   }
   
@@ -54,9 +54,9 @@ Event.code = async (client: Client, reaction: MessageReaction, user: User) => {
       
       reaction.message.reactions.cache.get(yes).users.remove(user.id)
       
-      reaction.message.channel.send(`${user} changed their vote from Yes to No`, {allowedMentions: {parse: []}})
+      reaction.message.channel.send(`${user} (${user.tag}) changed their vote from Yes to No`, {allowedMentions: {parse: []}})
       
-    } else reaction.message.channel.send(`${user} voted No`, {allowedMentions: {parse: []}})
+    } else reaction.message.channel.send(`${user} (${user.tag}) voted No`, {allowedMentions: {parse: []}})
   
   }
   

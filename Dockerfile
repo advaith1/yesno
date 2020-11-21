@@ -2,6 +2,6 @@ FROM node:14
 WORKDIR /app
 COPY . .
 RUN apt update && apt install build-essential -y
-RUN npm i ts-node
-RUN npm i
-CMD ["npm", "start"]
+RUN curl -L https://unpkg.com/@pnpm/self-installer | node
+RUN pnpm i
+CMD ["pnpm", "start"]

@@ -14,8 +14,10 @@ interface RawEvent {
     t: string
 }
 
+const datadogKey = !!process.env.DATADOG_API_KEY
+
 Event.code = async (client, event: RawEvent) => {
-    if(event.t) increment('yesno.WSEvent', 1, [`event:${event.t}`])
+    if(datadogKey && event.t) increment('yesno.WSEvent', 1, [`event:${event.t}`])
 }
 
 export = Event

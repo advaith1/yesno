@@ -16,7 +16,7 @@ declare module 'sparkbots' {
     interface StartOptions {
         prefix: string | string[]
         ignoreBots?: boolean
-        token: string
+        token?: string
         disabled?: any
         clientOptions?: ClientOptions
         ownerID?: Snowflake
