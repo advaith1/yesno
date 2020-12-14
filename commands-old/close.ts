@@ -1,8 +1,8 @@
 import {command} from 'sparkbots'
-import { TextChannel } from 'discord.js'
-import { APIInteraction } from 'discord-api-types/v8'
+import {Message} from 'discord.js'
 const Command = command("close")
 Command.setLevel(0)
+Command.allowDms(true)
 Command.setDescription('close a poll')
 export = Command
 
@@ -10,17 +10,19 @@ import {db} from '../db'
 import {yes, no} from '../emojis.json'
 
 
-Command.code = async (client, interaction: APIInteraction, respond, followup) => {
+Command.code = async (client, message: Message) => {
   
   try {
     
-  const doc = db.collection('polls').doc(interaction.channel_id)
+  const doc = db.collection('polls').doc(message.channel.id)
     
   const docx = await doc.get()
   
-  if(!docx.data()?.message) return respond({type: 4, data: {content: 'Looks like there isn\'t a poll currently open.'}})
-        
-  const msg = await (client.channels.cache.get(interaction.channel_id) as TextChannel).messages.fetch(docx.data().message)
+  if(!docx.data()) return message.channel.send('Looks like there isn\'t a poll currently open.')
+    
+  if(!docx.data().message) return message.channel.send('Looks like there isn\'t a poll currently open.')
+    
+  const msg = await message.channel.messages.fetch(docx.data().message)
   
   const votemsgs = [
     '', '', '',
@@ -36,24 +38,26 @@ Command.code = async (client, interaction: APIInteraction, respond, followup) =>
   if(q.length > 243)
     q = q.slice(0, 239) + '...'
   
-  await respond({type: 3, data: {
-      embeds: [{
-        title: `Poll Closed: ${q}`,
-        description: `<:yes:424361224675786752> Yes: ${msg.reactions.cache.get(yes).count-1}
+  await message.channel.send({
+      "embed": {
+        "title": `Poll Closed: ${q}`,
+        "description": `<:yes:424361224675786752> Yes: ${msg.reactions.cache.get(yes).count-1}
 <:no:424361302069346304> No: ${msg.reactions.cache.get(no).count-1}
-[Poll Message](https://discord.com/channels/${interaction.guild_id}/${interaction.channel_id}/${msg.id})${votemsg}`
-      }]
-    }})
+[Poll Message](https://discord.com/channels/${message.guild.id}/${message.channel.id}/${msg.id})${votemsg}`
+      }
+    })
   
-  await followup.send(`<@${interaction.member.user.id}> closed a poll`, {allowedMentions: {parse: []}})
+  await message.channel.send(`${message.author} closed a poll`, {allowedMentions: {parse: []}})
   
   msg.unpin()
+
+  message.delete()
   
   doc.delete()
     
   } catch (e) {
   
-    followup.send(`There was an error closing the poll: ${e}
+    message.channel.send(`There was an error closing the poll: ${e}
 
 To force close the active poll use \`yn.forceclose\`.`)
     

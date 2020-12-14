@@ -1,14 +1,16 @@
 import {event} from 'sparkbots'
-import {Client, MessageReaction, User} from 'discord.js'
+import {MessageReaction, User} from 'discord.js'
 const Event = event("unvote")
 Event.setEvent("messageReactionRemove")
 
 import {db} from '../db'
 import {yes, no} from '../emojis.json'
 
-Event.code = async (client: Client, reaction: MessageReaction, user: User) => {
+Event.code = async (client, reaction: MessageReaction, user: User) => {
 
   if(reaction.partial) await reaction.fetch()
+
+  if(user.partial) await user.fetch()
 
   const doc = db.collection('polls').doc(reaction.message.channel.id)
 

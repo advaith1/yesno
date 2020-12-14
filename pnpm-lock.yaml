@@ -2,22 +2,23 @@ dependencies:
   blapi: 2.0.1
   bufferutil: 4.0.2
   datadog-metrics: 0.8.2
-  discord.js: github.com/discordjs/discord.js/eaecd0e8b790f218b2c52021b433c0957ec539c3_0200697df5ac38adb1cba3cf2367a68a
+  discord-api-types: github.com/discordjs/discord-api-types/cc6638f44473fea0907c20ec0aee9cee16e3fffe
+  discord.js: 12.5.1_0200697df5ac38adb1cba3cf2367a68a
   dotenv: 8.2.0
   erlpack: github.com/discord/erlpack/e27db8f82892bdb9b28a0547cc394d68b5d2242d
   express: 4.17.1
-  firebase-admin: 9.4.1
+  firebase-admin: 9.4.2
   snekfetch: 4.0.4
-  sparkbots: github.com/advaith1/Spark-djs12/99886f05ae496331a7d5e48fd9f6a0c63f775c40_discord.js@12.4.1
-  ts-node: 9.0.0_typescript@4.1.2
-  typescript: 4.1.2
+  sparkbots: github.com/advaith1/Spark-djs12/da48d04e4c1437c52de459ec6d520eed4502224d_discord.js@12.5.1
+  ts-node: 9.1.1_typescript@4.1.3
+  typescript: 4.1.3
   utf-8-validate: 5.0.3
   zlib-sync: 0.1.7
 devDependencies:
   '@discordjs/collection': 0.1.6
   '@types/datadog-metrics': 0.6.0
   '@types/express': 4.17.9
-  '@types/node': 14.14.9
+  '@types/node': 14.14.13
   '@types/snekfetch': 4.0.2
 lockfileVersion: 5.2
 packages:
@@ -38,50 +39,50 @@ packages:
     dev: false
     resolution:
       integrity: sha512-L/ZnJRAq7F++utfuoTKX4CLBG5YR7tFO3PLzG1/oXXKEezJ0kRL3CMRoueBEmTCzVb/6SIs2Qlaw++uDgi5Xyg==
-  /@firebase/auth-interop-types/0.1.5_@firebase+util@0.3.2:
+  /@firebase/auth-interop-types/0.1.5_@firebase+util@0.3.4:
     dependencies:
-      '@firebase/util': 0.3.2
+      '@firebase/util': 0.3.4
     dev: false
     peerDependencies:
       '@firebase/app-types': 0.x
       '@firebase/util': 0.x
     resolution:
       integrity: sha512-88h74TMQ6wXChPA6h9Q3E1Jg6TkTHep2+k63OWg3s0ozyGVMeY+TTOti7PFPzq5RhszQPQOoCi59es4MaRvgCw==
-  /@firebase/component/0.1.19:
+  /@firebase/component/0.1.21:
     dependencies:
-      '@firebase/util': 0.3.2
+      '@firebase/util': 0.3.4
       tslib: 1.14.1
     dev: false
     resolution:
-      integrity: sha512-L0S3g8eqaerg8y0zox3oOHSTwn/FE8RbcRHiurnbESvDViZtP5S5WnhuAPd7FnFxa8ElWK0z1Tr3ikzWDv1xdQ==
-  /@firebase/database-types/0.5.2:
+      integrity: sha512-kd5sVmCLB95EK81Pj+yDTea8pzN2qo/1yr0ua9yVi6UgMzm6zAeih73iVUkaat96MAHy26yosMufkvd3zC4IKg==
+  /@firebase/database-types/0.6.1:
     dependencies:
       '@firebase/app-types': 0.6.1
     dev: false
     resolution:
-      integrity: sha512-ap2WQOS3LKmGuVFKUghFft7RxXTyZTDr0Xd8y2aqmWsbJVjgozi0huL/EUMgTjGFrATAjcf2A7aNs8AKKZ2a8g==
-  /@firebase/database/0.6.13:
+      integrity: sha512-JtL3FUbWG+bM59iYuphfx9WOu2Mzf0OZNaqWiQ7lJR8wBe7bS9rIm9jlBFtksB7xcya1lZSQPA/GAy2jIlMIkA==
+  /@firebase/database/0.8.1:
     dependencies:
-      '@firebase/auth-interop-types': 0.1.5_@firebase+util@0.3.2
-      '@firebase/component': 0.1.19
-      '@firebase/database-types': 0.5.2
+      '@firebase/auth-interop-types': 0.1.5_@firebase+util@0.3.4
+      '@firebase/component': 0.1.21
+      '@firebase/database-types': 0.6.1
       '@firebase/logger': 0.2.6
-      '@firebase/util': 0.3.2
+      '@firebase/util': 0.3.4
       faye-websocket: 0.11.3
       tslib: 1.14.1
     dev: false
     resolution:
-      integrity: sha512-NommVkAPzU7CKd1gyehmi3lz0K78q0KOfiex7Nfy7MBMwknLm7oNqKovXSgQV1PCLvKXvvAplDSFhDhzIf9obA==
+      integrity: sha512-/1HhR4ejpqUaM9Cn3KSeNdQvdlehWIhdfTVWFxS73ZlLYf7ayk9jITwH10H3ZOIm5yNzxF67p/U7Z/0IPhgWaQ==
   /@firebase/logger/0.2.6:
     dev: false
     resolution:
       integrity: sha512-KIxcUvW/cRGWlzK9Vd2KB864HlUnCfdTH0taHE0sXW5Xl7+W68suaeau1oKNEqmc3l45azkd4NzXTCWZRZdXrw==
-  /@firebase/util/0.3.2:
+  /@firebase/util/0.3.4:
     dependencies:
       tslib: 1.14.1
     dev: false
     resolution:
-      integrity: sha512-Dqs00++c8rwKky6KCKLLY2T1qYO4Q+X5t+lF7DInXDNF4ae1Oau35bkD+OpJ9u7l1pEv7KHowP6CUKuySCOc8g==
+      integrity: sha512-VwjJUE2Vgr2UMfH63ZtIX9Hd7x+6gayi6RUXaTqEYxSbf/JmehLmAEYSuxS/NckfzAXWeGnKclvnXVibDgpjQQ==
   /@google-cloud/common/3.5.0:
     dependencies:
       '@google-cloud/projectify': 2.0.1
@@ -165,7 +166,7 @@ packages:
   /@grpc/grpc-js/1.1.8:
     dependencies:
       '@grpc/proto-loader': 0.6.0-pre9
-      '@types/node': 12.19.6
+      '@types/node': 12.19.9
       google-auth-library: 6.1.3
       semver: 6.3.0
     dev: false
@@ -261,13 +262,13 @@ packages:
   /@types/body-parser/1.19.0:
     dependencies:
       '@types/connect': 3.4.33
-      '@types/node': 14.14.9
+      '@types/node': 14.14.13
     dev: true
     resolution:
       integrity: sha512-W98JrE0j2K78swW4ukqMleo8R7h/pFETjM2DQ90MF6XK2i4LO4W3gQ71Lt4w3bfm2EvVSyWHplECvB5sK22yFQ==
   /@types/connect/3.4.33:
     dependencies:
-      '@types/node': 14.14.9
+      '@types/node': 14.14.13
     dev: true
     resolution:
       integrity: sha512-2+FrkXY4zllzTNfJth7jOqEHC+enpLeGslEhpnTAkg21GkRrWV4SsAtqchtT4YS9/nODBU2/ZfsBY2X4J/dX7A==
@@ -277,7 +278,7 @@ packages:
       integrity: sha512-MBOPUAvG6xRSgQaOtdEUnF1qwx0JGTjTVhKPzw9a3C9hguaWMNM3KUjRJMRlkgjw8AhV56IXfl2cQH9Tqd5ydA==
   /@types/express-serve-static-core/4.17.13:
     dependencies:
-      '@types/node': 14.14.9
+      '@types/node': 14.14.13
       '@types/qs': 6.9.5
       '@types/range-parser': 1.2.3
     dev: true
@@ -301,28 +302,24 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Jus9s4CDbqwocc5pOAnh8ShfrnMcPHuJYzVcSUU7lrh8Ni5HuIqX3oilL86p3dlTrk0LzHRCgA/GQ7uNCw6l2Q==
-  /@types/node/10.17.46:
+  /@types/node/10.17.49:
     dev: false
     resolution:
-      integrity: sha512-Tice8a+sJtlP9C1EUo0DYyjq52T37b3LexVu3p871+kfIBIN+OQ7PKPei1oF3MgF39olEpUfxaLtD+QFc1k69Q==
-  /@types/node/12.19.6:
-    dev: false
-    optional: true
-    resolution:
-      integrity: sha512-U2VopDdmBoYBmtm8Rz340mvvSz34VgX/K9+XCuckvcLGMkt3rbMX8soqFOikIPlPBc5lmw8By9NUK7bEFSBFlQ==
-  /@types/node/13.13.32:
+      integrity: sha512-PGaJNs5IZz5XgzwJvL/1zRfZB7iaJ5BydZ8/Picm+lUNYoNO9iVTQkVy5eUh0dZDrx3rBOIs3GCbCRmMuYyqwg==
+  /@types/node/12.19.9:
     dev: false
     optional: true
     resolution:
-      integrity: sha512-sPBvDnrwZE1uePhkCEyI/qQlgZM5kePPAhHIFDWNsOrWBFRBOk3LKJYmVCLeLZlL9Ub/FzMJb31OTWCg2F+06g==
-  /@types/node/13.7.4:
+      integrity: sha512-yj0DOaQeUrk3nJ0bd3Y5PeDRJ6W0r+kilosLA+dzF3dola/o9hxhMSg2sFvVcA2UHS5JSOsZp4S0c1OEXc4m1Q==
+  /@types/node/13.13.36:
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-ctzZJ+XsmHQwe3xp07gFUq4JxBaRSYzKHPgblR76//UanGST7vfFNF0+ty5eEbgTqsENopzoDK090xlha9dccQ==
+  /@types/node/14.14.13:
     dev: true
     resolution:
-      integrity: sha512-oVeL12C6gQS/GAExndigSaLxTrKpQPxewx9bOcwfvJiJge4rr7wNaph4J+ns5hrmIV2as5qxqN8YKthn9qh0jw==
-  /@types/node/14.14.9:
-    dev: true
-    resolution:
-      integrity: sha512-JsoLXFppG62tWTklIoO4knA+oDTYsmqWxHRvd4lpmfQRNhX6osheUOWETP2jMoV/2bEHuMra8Pp3Dmo/stBFcw==
+      integrity: sha512-vbxr0VZ8exFMMAjCW8rJwaya0dMCDyYW2ZRdTyjtrCvJoENMpdUHOT/eTzvgyA5ZnqRZ/sI0NwqAxNHKYokLJQ==
   /@types/qs/6.9.5:
     dev: true
     resolution:
@@ -334,13 +331,13 @@ packages:
   /@types/serve-static/1.13.8:
     dependencies:
       '@types/mime': 2.0.3
-      '@types/node': 14.14.9
+      '@types/node': 14.14.13
     dev: true
     resolution:
       integrity: sha512-MoJhSQreaVoL+/hurAZzIm8wafFR6ajiTM1m4A0kv6AGeVBl4r4pOV8bGFrjjq1sGxDTnCoF8i22o0/aE5XCyA==
   /@types/snekfetch/4.0.2:
     dependencies:
-      '@types/node': 13.7.4
+      '@types/node': 14.14.13
     dev: true
     resolution:
       integrity: sha512-A4hiN8qK0EOrNENtcy5BUyi4TbOanMt/JcF7bJGDAL8gknZXDyqLrNRjE5krXm9wRjD3pgDa8bHg3Wre0jSINQ==
@@ -667,6 +664,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+  /create-require/1.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
   /crypto-random-string/2.0.0:
     dev: false
     engines:
@@ -763,6 +764,24 @@ packages:
       node: '>=0.3.1'
     resolution:
       integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
+  /discord.js/12.5.1_0200697df5ac38adb1cba3cf2367a68a:
+    dependencies:
+      '@discordjs/collection': 0.1.6
+      '@discordjs/form-data': 3.0.1
+      abort-controller: 3.0.0
+      node-fetch: 2.6.1
+      prism-media: 1.2.3
+      setimmediate: 1.0.5
+      tweetnacl: 1.0.3
+      ws: 7.4.1_0200697df5ac38adb1cba3cf2367a68a
+    dev: false
+    engines:
+      node: '>=12.0.0'
+    peerDependencies:
+      bufferutil: '*'
+      utf-8-validate: '*'
+    resolution:
+      integrity: sha512-VwZkVaUAIOB9mKdca0I5MefPMTQJTNg0qdgi1huF3iwsFwJ0L5s/Y69AQe+iPmjuV6j9rtKoG0Ta0n9vgEIL6w==
   /dogapi/2.8.3:
     dependencies:
       extend: 3.0.2
@@ -983,11 +1002,11 @@ packages:
     optional: true
     resolution:
       integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==
-  /firebase-admin/9.4.1:
+  /firebase-admin/9.4.2:
     dependencies:
-      '@firebase/database': 0.6.13
-      '@firebase/database-types': 0.5.2
-      '@types/node': 10.17.46
+      '@firebase/database': 0.8.1
+      '@firebase/database-types': 0.6.1
+      '@types/node': 10.17.49
       dicer: 0.3.0
       jsonwebtoken: 8.5.1
       node-forge: 0.10.0
@@ -998,7 +1017,7 @@ packages:
       '@google-cloud/firestore': 4.7.1
       '@google-cloud/storage': 5.5.0
     resolution:
-      integrity: sha512-y9r2Mz2x1WTr60YrCDqz8Lw70DlwIvRIieVltP+UdRogkVpfnvyd+bi4D0KPlujW3teqcFPmxuzsXB+DP5vGfQ==
+      integrity: sha512-mRnBJbW6BAz6DJkZ0GOUTkmnmCrwVzMreMc6O+RXWukFydOzi5Xr6TKSiPKxoOQw41r9IluP2AZ3Qzvlx2SR+g==
   /forever-agent/0.6.1:
     dev: false
     resolution:
@@ -1724,13 +1743,13 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
-  /prism-media/1.2.2:
+  /prism-media/1.2.3:
     dev: false
     peerDependencies:
-      '@discordjs/opus': ^0.1.0
-      ffmpeg-static: ^2.4.0 || ^3.0.0
-      node-opus: ^0.3.1
-      opusscript: ^0.0.6
+      '@discordjs/opus': ^0.3.3
+      ffmpeg-static: ^4.2.7 || ^3.0.0 || ^2.4.0
+      node-opus: ^0.3.3
+      opusscript: ^0.0.7
     peerDependenciesMeta:
       '@discordjs/opus':
         optional: true
@@ -1741,7 +1760,7 @@ packages:
       opusscript:
         optional: true
     resolution:
-      integrity: sha512-I+nkWY212lJ500jLe4tN9tWO7nRiBAVdMv76P9kffZjYhw20raMlW1HSSvS+MLXC9MmbNZCazMrAr+5jEEgTuw==
+      integrity: sha512-fSrR66n0l6roW9Rx4rSLMyTPTjRTiXy5RVqDOurACQ6si1rKHHKDU5gwBJoCsIV0R3o9gi+K50akl/qyw1C74A==
   /protobufjs/6.10.2:
     dependencies:
       '@protobufjs/aspromise': 1.1.2
@@ -1755,7 +1774,7 @@ packages:
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
       '@types/long': 4.0.1
-      '@types/node': 13.13.32
+      '@types/node': 13.13.36
       long: 4.0.0
     dev: false
     hasBin: true
@@ -2168,13 +2187,14 @@ packages:
       node: '>=0.8'
     resolution:
       integrity: sha512-nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==
-  /ts-node/9.0.0_typescript@4.1.2:
+  /ts-node/9.1.1_typescript@4.1.3:
     dependencies:
       arg: 4.1.3
+      create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
       source-map-support: 0.5.19
-      typescript: 4.1.2
+      typescript: 4.1.3
       yn: 3.1.1
     dev: false
     engines:
@@ -2183,7 +2203,7 @@ packages:
     peerDependencies:
       typescript: '>=2.7'
     resolution:
-      integrity: sha512-/TqB4SnererCDR/vb4S/QvSZvzQMJN8daAslg7MeaiHvD8rDZsSfXmNeNumyZZzMned72Xoq/isQljYSt8Ynfg==
+      integrity: sha512-hPlt7ZACERQGf03M253ytLY3dHbGNGrAq9qIHWUY9XHYl1z7wYngSr3OQ5xmui8o2AaxsONxIzjafLUiWBo1Fg==
   /tslib/1.14.1:
     dev: false
     resolution:
@@ -2218,13 +2238,13 @@ packages:
     optional: true
     resolution:
       integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
-  /typescript/4.1.2:
+  /typescript/4.1.3:
     dev: false
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-thGloWsGH3SOxv1SoY7QojKi0tc+8FnOmiarEGMbd/lar7QOEd3hvlx3Fp5y6FlDUGl9L+pd4n2e+oToGMmhRQ==
+      integrity: sha512-B3ZIOf1IKeH2ixgHhj6la6xdwR9QrLC5d1VKeCSY4tvkqhF2eqd9O7txNlS0PO3GrBAFIdr3L1ndNwteUbZLYg==
   /unique-string/2.0.0:
     dependencies:
       crypto-random-string: 2.0.0
@@ -2350,7 +2370,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-eqZfL+NE/YQc1/ZynhojeV8q+H050oR8AZ2uIev7RU10svA9ZnJUddHcOUZTJLinZ9yEfdA2kSATS2qZK5fhJA==
-  /ws/7.4.0_0200697df5ac38adb1cba3cf2367a68a:
+  /ws/7.4.1_0200697df5ac38adb1cba3cf2367a68a:
     dependencies:
       bufferutil: 4.0.2
       utf-8-validate: 5.0.3
@@ -2366,7 +2386,7 @@ packages:
       utf-8-validate:
         optional: true
     resolution:
-      integrity: sha512-kyFwXuV/5ymf+IXhS6f0+eAFvydbaBW3zjpT6hUdAh/hbVjTIB5EHBGi0bPoCLSK2wcuz3BrEkB9LrYv1Nm4NQ==
+      integrity: sha512-pTsP8UAfhy3sk1lSk/O/s4tjD0CRwvMnzvwr4OKGX7ZvqZtUyx4KIJB5JWbkykPoc55tixMGgTNoh3k4FkNGFQ==
   /xdg-basedir/4.0.0:
     dev: false
     engines:
@@ -2436,21 +2456,21 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-UmciU6ZrIwtwPC8noMzq+kGMdiWwNRZ3wC0SbED4Ew5Ikqx14MqDPRs/Pbk+3rZPh5SzsOgUBs1WRE0iieddpg==
-  github.com/advaith1/Spark-djs12/99886f05ae496331a7d5e48fd9f6a0c63f775c40_discord.js@12.4.1:
+  github.com/advaith1/Spark-djs12/da48d04e4c1437c52de459ec6d520eed4502224d_discord.js@12.5.1:
     dependencies:
       chalk: 2.4.2
-      discord.js: github.com/discordjs/discord.js/eaecd0e8b790f218b2c52021b433c0957ec539c3_0200697df5ac38adb1cba3cf2367a68a
+      discord.js: 12.5.1_0200697df5ac38adb1cba3cf2367a68a
       fs-extra: 5.0.0
       request: 2.88.2
       request-promise: 4.2.6_request@2.88.2
       socket.io-client: 2.3.1
     dev: false
-    id: github.com/advaith1/Spark-djs12/99886f05ae496331a7d5e48fd9f6a0c63f775c40
+    id: github.com/advaith1/Spark-djs12/da48d04e4c1437c52de459ec6d520eed4502224d
     name: sparkbots
     peerDependencies:
       discord.js: 12.x
     resolution:
-      tarball: 'https://codeload.github.com/advaith1/Spark-djs12/tar.gz/99886f05ae496331a7d5e48fd9f6a0c63f775c40'
+      tarball: 'https://codeload.github.com/advaith1/Spark-djs12/tar.gz/da48d04e4c1437c52de459ec6d520eed4502224d'
     version: 0.1.0
   github.com/discord/erlpack/e27db8f82892bdb9b28a0547cc394d68b5d2242d:
     dependencies:
@@ -2462,44 +2482,32 @@ packages:
     resolution:
       tarball: 'https://codeload.github.com/discord/erlpack/tar.gz/e27db8f82892bdb9b28a0547cc394d68b5d2242d'
     version: 0.1.3
-  github.com/discordjs/discord.js/eaecd0e8b790f218b2c52021b433c0957ec539c3_0200697df5ac38adb1cba3cf2367a68a:
-    dependencies:
-      '@discordjs/collection': 0.1.6
-      '@discordjs/form-data': 3.0.1
-      abort-controller: 3.0.0
-      node-fetch: 2.6.1
-      prism-media: 1.2.2
-      setimmediate: 1.0.5
-      tweetnacl: 1.0.3
-      ws: 7.4.0_0200697df5ac38adb1cba3cf2367a68a
+  github.com/discordjs/discord-api-types/cc6638f44473fea0907c20ec0aee9cee16e3fffe:
     dev: false
     engines:
-      node: '>=12.0.0'
-    id: github.com/discordjs/discord.js/eaecd0e8b790f218b2c52021b433c0957ec539c3
-    name: discord.js
-    peerDependencies:
-      bufferutil: '*'
-      utf-8-validate: '*'
+      node: '>=12'
+    name: discord-api-types
     resolution:
-      tarball: 'https://codeload.github.com/discordjs/discord.js/tar.gz/eaecd0e8b790f218b2c52021b433c0957ec539c3'
-    version: 12.4.1
+      tarball: 'https://codeload.github.com/discordjs/discord-api-types/tar.gz/cc6638f44473fea0907c20ec0aee9cee16e3fffe'
+    version: 0.10.0
 specifiers:
   '@discordjs/collection': ^0.1.6
   '@types/datadog-metrics': ^0.6.0
   '@types/express': ^4.17.9
-  '@types/node': ^14.14.9
+  '@types/node': ^14.14.13
   '@types/snekfetch': ^4.0.2
   blapi: ^2.0.1
   bufferutil: ^4.0.2
   datadog-metrics: ^0.8.2
-  discord.js: 'github:discordjs/discord.js'
+  discord-api-types: 'github:discordjs/discord-api-types#feat/slashy-bois'
+  discord.js: ^12.5.1
   dotenv: ^8.2.0
   erlpack: 'github:discord/erlpack'
   express: ^4.17.1
-  firebase-admin: ^9.4.1
+  firebase-admin: ^9.4.2
   snekfetch: ^4.0.4
-  sparkbots: 'github:advaith1/Spark-djs12#Stable'
-  ts-node: ^9.0.0
-  typescript: ^4.1.2
+  sparkbots: 'github:advaith1/Spark-djs12#slash'
+  ts-node: ^9.1.1
+  typescript: ^4.1.3
   utf-8-validate: ^5.0.3
   zlib-sync: ^0.1.7
