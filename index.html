@@ -82,7 +82,7 @@
         <h2 class="title">
           YesNo
         </h2>
-        <a class="button is-primary is-large" id="addbtn" target="_blank" rel="noopener" href="https://discord.com/oauth2/authorize?client_id=526189797711151114&scope=bot+applications.commands&response_type=code">
+        <a class="button is-primary is-large" id="addbtn" target="_blank" rel="noopener" href="https://discord.com/api/oauth2/authorize?client_id=526189797711151114&scope=bot+applications.commands&response_type=code">
           <span class="icon">
             <i class="fab fa-discord"></i>
           </span>
@@ -111,7 +111,7 @@
           YesNo is a simple open-source Discord yes/no poll bot for created by <a href="https://advaith.io" target="_blank" rel="noopener">advaith</a>. It is based on the YesNo bot built in to <a href="https://allo.google.com" target="_blank" rel="noopener">Google Allo</a>, which shut down in March 2019.
         </p>
       </div>
-  </section>
+    </section>
     <section class="section">
       <div class="container">
         <p class="has-text-white">
@@ -122,7 +122,14 @@
     <section class="section">
       <div class="container">
         <p class="has-text-white">
-          You can close a poll (which will unpin it and send the results) by sending <code>yn.close</code>.
+          YesNo now supports <strong>Slash Commands</strong>! Instead of sending messages to use YesNo's commands like close, you can press / and use the commands from your Discord client!
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <p class="has-text-white">
+          You can close a poll (which will unpin it and send the results) by using <code>/close</code>.
         </p>
       </div>
     </section>
