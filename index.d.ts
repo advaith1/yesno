@@ -7,14 +7,15 @@ declare module 'sparkbots' {
     // @ts-expect-error
     interface Client extends DiscordClient {
         readonly api: {
-            channels: any;
-            gateway: any;
-            guilds: any;
-            invites: any;
-            oauth2: any;
-            users: any;
-            voice: any;
-            webhooks: any;
+            applications: any
+            channels: any
+            gateway: any
+            guilds: any
+            invites: any
+            oauth2: any
+            users: any
+            voice: any
+            webhooks: any
         }
         config: any
     }

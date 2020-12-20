@@ -1,6 +1,6 @@
 import {command} from 'sparkbots'
 import { TextChannel } from 'discord.js'
-import { APIInteraction } from 'discord-api-types/v8'
+import { APIInteraction, APIInteractionResponseType } from 'discord-api-types/v8'
 const Command = command("stats")
 Command.setLevel(0)
 Command.setDescription('close a poll')
@@ -15,11 +15,11 @@ Command.code = async (client, interaction: APIInteraction, respond) => {
     
   const docx = await doc.get()
   
-  if(!docx.data()?.message) return respond({type: 4, data: {content: 'Looks like there isn\'t a poll currently open.'}})
+  if(!docx.data()?.message) return respond({type: APIInteractionResponseType.ChannelMessageWithSource, data: {content: 'Looks like there isn\'t a poll currently open.'}})
     
   const msg = await (client.channels.cache.get(interaction.channel_id) as TextChannel).messages.fetch(docx.data().message)
   
-  await respond({type: 4, data: {
+  await respond({type: APIInteractionResponseType.ChannelMessageWithSource, data: {
       embeds: [{
         title: `Poll Stats: ${docx.data().q}`,
         description: `<:yes:424361224675786752> Yes: ${msg.reactions.cache.get(yes).count-1}

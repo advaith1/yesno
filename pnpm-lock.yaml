@@ -2,7 +2,7 @@ dependencies:
   blapi: 2.0.1
   bufferutil: 4.0.2
   datadog-metrics: 0.8.2
-  discord-api-types: github.com/discordjs/discord-api-types/cc6638f44473fea0907c20ec0aee9cee16e3fffe
+  discord-api-types: 0.11.1
   discord.js: 12.5.1_0200697df5ac38adb1cba3cf2367a68a
   dotenv: 8.2.0
   erlpack: github.com/discord/erlpack/e27db8f82892bdb9b28a0547cc394d68b5d2242d
@@ -18,7 +18,7 @@ devDependencies:
   '@discordjs/collection': 0.1.6
   '@types/datadog-metrics': 0.6.0
   '@types/express': 4.17.9
-  '@types/node': 14.14.13
+  '@types/node': 14.14.14
   '@types/snekfetch': 4.0.2
 lockfileVersion: 5.2
 packages:
@@ -320,6 +320,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-vbxr0VZ8exFMMAjCW8rJwaya0dMCDyYW2ZRdTyjtrCvJoENMpdUHOT/eTzvgyA5ZnqRZ/sI0NwqAxNHKYokLJQ==
+  /@types/node/14.14.14:
+    dev: true
+    resolution:
+      integrity: sha512-UHnOPWVWV1z+VV8k6L1HhG7UbGBgIdghqF3l9Ny9ApPghbjICXkUJSd/b9gOgQfjM1r+37cipdw/HJ3F6ICEnQ==
   /@types/qs/6.9.5:
     dev: true
     resolution:
@@ -764,6 +768,12 @@ packages:
       node: '>=0.3.1'
     resolution:
       integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
+  /discord-api-types/0.11.1:
+    dev: false
+    engines:
+      node: '>=12'
+    resolution:
+      integrity: sha512-ESGUMAcOY+fZFjK1JxhEXMhDjQzr8bYYrinDlvdsxs9BGhUkiQlZnGW1mk65r9V5WR9+RiyK57mg7QCC5MWsMQ==
   /discord.js/12.5.1_0200697df5ac38adb1cba3cf2367a68a:
     dependencies:
       '@discordjs/collection': 0.1.6
@@ -2482,24 +2492,16 @@ packages:
     resolution:
       tarball: 'https://codeload.github.com/discord/erlpack/tar.gz/e27db8f82892bdb9b28a0547cc394d68b5d2242d'
     version: 0.1.3
-  github.com/discordjs/discord-api-types/cc6638f44473fea0907c20ec0aee9cee16e3fffe:
-    dev: false
-    engines:
-      node: '>=12'
-    name: discord-api-types
-    resolution:
-      tarball: 'https://codeload.github.com/discordjs/discord-api-types/tar.gz/cc6638f44473fea0907c20ec0aee9cee16e3fffe'
-    version: 0.10.0
 specifiers:
   '@discordjs/collection': ^0.1.6
   '@types/datadog-metrics': ^0.6.0
   '@types/express': ^4.17.9
-  '@types/node': ^14.14.13
+  '@types/node': ^14.14.14
   '@types/snekfetch': ^4.0.2
   blapi: ^2.0.1
   bufferutil: ^4.0.2
   datadog-metrics: ^0.8.2
-  discord-api-types: 'github:discordjs/discord-api-types#feat/slashy-bois'
+  discord-api-types: ^0.11.1
   discord.js: ^12.5.1
   dotenv: ^8.2.0
   erlpack: 'github:discord/erlpack'

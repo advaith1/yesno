@@ -4,17 +4,19 @@
 
 YesNo is a simple Discord yes/no poll bot for created by advaith. It is based on the YesNo bot built in to Google Allo, which shut down in March 2019.
 
-[Website](https://yesno.advaith.io) | [Add to Discord](https://discord.com/api/oauth2/authorize?client_id=526189797711151114&scope=bot&response_type=code)
+YesNo now has [Slash Commands](https://discord.com/developers/docs/interactions/slash-commands)!
+
+[Website](https://yesno.advaith.io) | [Add to Discord](https://discord.com/api/oauth2/authorize?client_id=526189797711151114&scope=bot+applications.commands&response_type=code)
 
 ## Using YesNo
 
 YesNo is super easy to use and requires no setup. To create a poll, mention the bot (`@YesNo`) and ask the question. For example: `@YesNo is YesNo the best bot?`. Polls will be pinned to the channel so people can easily find them.
 
-You can close a poll (which will unpin it and send the results) by sending `yn.close`.
+You can close a poll (which will unpin it and send the results) by using `/close`.
 
 ## YesNo Development
 
-YesNo uses [discord.js](https://discord.js.org) v12 ([Docs](https://discord.js.org/#/docs/main/master/general/welcome), [Repo](https://github.com/discordjs/discord.js)) and a fork of [Spark](https://sparkdocs.advaith.fun) ([Docs](https://sparkdocs.advaith.fun/documentation/intro), [Repo](https://github.com/advaith1/Spark-djs12)). [Cloud Firestore](https://firebase.google.com/products/firestore) is used for the database. YesNo uses TypeScript and Node.js v13.
+YesNo uses [discord.js](https://discord.js.org) v12 ([Docs](https://discord.js.org/#/docs/main/master/general/welcome), [Repo](https://github.com/discordjs/discord.js)) and a fork of [Spark](https://sparkdocs.advaith.fun) ([Docs](https://sparkdocs.advaith.fun/documentation/intro), [Repo](https://github.com/advaith1/Spark-djs12)). [Cloud Firestore](https://firebase.google.com/products/firestore) is used for the database. YesNo uses TypeScript and Node.js v14.
 
 Tokens are loaded from a `.env` file: `TOKEN` is the Discord bot token, `PORT` is the port that the webserver (`web.ts`) runs on, `DATADOG_API_KEY` is the Datadog API key, and the bot list tokens from `functions/engines/botlists.ts` are there.
 
