@@ -2,3 +2,4 @@
 .env
 FIRESTORE.json
 node_modules
+debug.log

@@ -80,7 +80,7 @@
         <div class="container has-text-centered">
         <img alt="YesNo" src="/images/logo.svg" width="128" style="border-radius: 100%">
         <h2 class="title">
-          YesNo
+          <span style="color: #02e972">Yes</span><span style="color: #ff3c80">No</span>
         </h2>
         <a class="button is-primary is-large" id="addbtn" target="_blank" rel="noopener" href="https://discord.com/api/oauth2/authorize?client_id=526189797711151114&scope=bot+applications.commands&response_type=code">
           <span class="icon">
@@ -171,7 +171,16 @@
         </a>
       </div>
     </section>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.12.6/sweetalert2.min.js" integrity="sha512-cNaY7ThUQSAxQRW5wvhRBLheHFFAVjnXFFD3K8H7gI1xq+W+tVz9ntPNyoioKpJFc7DyYLWCFem3KBthn7XJTQ==" crossorigin="anonymous"></script>
     <script>
+      const params = new URLSearchParams(window.location.search)
+      if (params.has('guild_id'))
+        swal.fire('Thanks for adding YesNo to your server!', 'Read this page to learn how to use YesNo. If you need help, join the server!', 'success')
+      
+      if (params.has('error') && params.has('error_description'))
+        swal.fire(params.get('error'), params.get('error_description'), 'error')
+
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js')
