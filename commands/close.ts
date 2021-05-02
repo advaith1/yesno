@@ -1,6 +1,6 @@
 import {command} from 'sparkbots'
 import { TextChannel } from 'discord.js'
-import { APIInteraction, APIInteractionResponseType } from 'discord-api-types/v8'
+import { APIApplicationCommandGuildInteraction, InteractionResponseType, MessageFlags } from 'discord-api-types/v8'
 const Command = command("close")
 Command.setLevel(0)
 Command.setDescription('close a poll')
@@ -10,7 +10,10 @@ import {db} from '../db'
 import {yes, no} from '../emojis.json'
 
 
-Command.code = async (client, interaction: APIInteraction, respond, followup) => {
+Command.code = async (client, interaction: APIApplicationCommandGuildInteraction, respond, followup) => {
+
+  if (!interaction.guild_id) return respond({type: InteractionResponseType.ChannelMessageWithSource,
+    data: {content: 'DMs cannot have polls', flags: MessageFlags.EPHEMERAL}})
   
   try {
     
@@ -18,7 +21,7 @@ Command.code = async (client, interaction: APIInteraction, respond, followup) =>
     
   const docx = await doc.get()
   
-  if(!docx.data()?.message) return respond({type: APIInteractionResponseType.ChannelMessageWithSource,
+  if(!docx.data()?.message) return respond({type: InteractionResponseType.ChannelMessageWithSource,
     data: {content: 'Looks like there isn\'t a poll currently open.'}})
         
   const msg = await (client.channels.cache.get(interaction.channel_id) as TextChannel).messages.fetch(docx.data().message)
@@ -37,7 +40,7 @@ Command.code = async (client, interaction: APIInteraction, respond, followup) =>
   if(q.length > 243)
     q = q.slice(0, 239) + '...'
   
-  await respond({type: APIInteractionResponseType.ChannelMessage, data: {
+  await respond({type: InteractionResponseType.ChannelMessageWithSource, data: {
       embeds: [{
         title: `Poll Closed: ${q}`,
         description: `<:yes:424361224675786752> Yes: ${msg.reactions.cache.get(yes).count-1}

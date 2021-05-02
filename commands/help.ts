@@ -1,4 +1,4 @@
-import { APIInteractionResponseType } from 'discord-api-types/v8'
+import { InteractionResponseType } from 'discord-api-types/v8'
 import {command} from 'sparkbots'
 const Command = command("help")
 Command.setLevel(0)
@@ -6,7 +6,7 @@ export = Command
 
 Command.code = async (client, interaction, respond) => {
 
-  respond({type: APIInteractionResponseType.ChannelMessageWithSource, data: {
+  respond({type: InteractionResponseType.ChannelMessageWithSource, data: {
     embeds: [{
       title: "YesNo Help",
       description: `YesNo is a simple yes/no poll bot created by [advaith](https://advaith.io). It is based on the YesNo bot built in to [Google Allo](https://allo.google.com), which shut down in March 2019.

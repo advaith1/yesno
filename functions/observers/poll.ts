@@ -5,7 +5,7 @@ const Observer = observer("poll")
 import {db} from '../../db'
 import {yes, no} from '../../emojis.json'
 
-Observer.code = async (_client, message: Message) => {
+Observer.code = async (client, message: Message) => {
   
   if(message.content.startsWith('<@526189797711151114> ') || message.content.startsWith('<@!526189797711151114> ')) {
     
@@ -15,7 +15,7 @@ Observer.code = async (_client, message: Message) => {
     
     const docx = await doc.get()
     
-    if(docx.data()) return message.channel.send('A poll is currently open. Use `yn.close` to close it.')
+    if(docx.data()) return message.channel.send('A poll is currently open. Use `/close` to close it.')
     
     if(!message.channel.permissionsFor(message.guild.me).has('ADD_REACTIONS')) throw message.channel.send('I need the Add Reactions permission!')
     if(!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) throw message.channel.send('I need the Embed Links permission!')
