@@ -21,7 +21,7 @@ Observer.code = async (client, message: Message) => {
     if(!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) throw message.channel.send('I need the Embed Links permission!')
     if(!message.channel.permissionsFor(message.guild.me).has('MANAGE_MESSAGES')) throw message.channel.send('I need the Manage Messages permission!')
 
-    await message.channel.send(`${message.author} started a poll`, {allowedMentions: {parse: []}})
+    await message.channel.send({content: `${message.author} started a poll`, allowedMentions: {parse: []}})
 
     let q = message.cleanContent.split(' ').slice(1).join(' ')
     let q2 = ''
@@ -33,10 +33,10 @@ Observer.code = async (client, message: Message) => {
     }
 
     let msg = await message.channel.send({
-      embed: {
+      embeds: [{
         title: `Poll: ${q}`,
         description: q2
-      }
+      }]
     })
 
     await msg.react(yes)

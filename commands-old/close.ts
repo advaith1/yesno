@@ -1,5 +1,6 @@
 import {command} from 'sparkbots'
 import {Message} from 'discord.js'
+import { stripIndent } from 'common-tags'
 const Command = command("close")
 Command.setLevel(0)
 Command.allowDms(true)
@@ -39,15 +40,16 @@ Command.code = async (client, message: Message) => {
     q = q.slice(0, 239) + '...'
   
   await message.channel.send({
-      "embed": {
-        "title": `Poll Closed: ${q}`,
-        "description": `<:yes:424361224675786752> Yes: ${msg.reactions.cache.get(yes).count-1}
-<:no:424361302069346304> No: ${msg.reactions.cache.get(no).count-1}
-[Poll Message](https://discord.com/channels/${message.guild.id}/${message.channel.id}/${msg.id})${votemsg}`
-      }
+      embeds: [{
+        title: `Poll Closed: ${q}`,
+        description: stripIndent`
+          <:yes:424361224675786752> Yes: ${msg.reactions.cache.get(yes).count-1}
+          <:no:424361302069346304> No: ${msg.reactions.cache.get(no).count-1}
+          [Poll Message](${msg.url})${votemsg}`
+      }]
     })
   
-  await message.channel.send(`${message.author} closed a poll`, {allowedMentions: {parse: []}})
+  await message.channel.send({content: `${message.author} closed a poll`, allowedMentions: {parse: []}})
   
   msg.unpin()
 
@@ -57,9 +59,10 @@ Command.code = async (client, message: Message) => {
     
   } catch (e) {
   
-    message.channel.send(`There was an error closing the poll: ${e}
+    message.channel.send(stripIndent`
+      There was an error closing the poll: ${e}
 
-To force close the active poll use \`yn.forceclose\`.`)
+      To force close the active poll use \`yn.forceclose\`.`)
     
   }
   

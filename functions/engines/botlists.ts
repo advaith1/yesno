@@ -1,13 +1,13 @@
 import {engine} from 'sparkbots'
-import {Client} from 'discord.js'
 const Engine = engine("botlists")
 export = Engine
 
 import {handle} from 'blapi'
 
-Engine.code = (client: Client) => {
-      
+Engine.code = (client) => {
+
   try {
+    // @ts-ignore
     handle(client, {
       'botlist.space': process.env.bls,
       'bots.ondiscord.xyz': process.env.bod,

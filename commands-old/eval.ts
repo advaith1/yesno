@@ -13,6 +13,9 @@ Command.code = (client, message: Discord.Message) => {
         else
             return text;
     }
+
+    const {codeBlock} = Discord.Formatters
+
 //
 // Trying to prevent people from destroying their computer / bot / discord account.
 // Start
@@ -97,19 +100,15 @@ var tokendetection = new RegExp(client.token, 'gi')
 // Make sure bot token is not sent to the users in the channel
 //
             if (!m) {
-                message.channel.send(clean(evaled), {
-                    code: "xl"
-                });
+                message.channel.send(codeBlock('xl', clean(evaled)));
             } else {
-                m.edit(clean(evaled), {
-                    code: "xl"
-                });
+                m.edit(codeBlock('xl', clean(evaled)));
             }
         }
     } catch (err) {
         error(err)
     }
     function error(err) {
-        message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+        message.channel.send(`\`ERROR\` ${codeBlock('xl', clean(err))}`);
     }
 }

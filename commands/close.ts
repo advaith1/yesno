@@ -1,6 +1,6 @@
 import {command} from 'sparkbots'
-import { TextChannel } from 'discord.js'
-import { APIApplicationCommandGuildInteraction, InteractionResponseType, MessageFlags } from 'discord-api-types/v8'
+import { CommandInteraction } from 'discord.js'
+import { stripIndent } from 'common-tags'
 const Command = command("close")
 Command.setLevel(0)
 Command.setDescription('close a poll')
@@ -10,21 +10,19 @@ import {db} from '../db'
 import {yes, no} from '../emojis.json'
 
 
-Command.code = async (client, interaction: APIApplicationCommandGuildInteraction, respond, followup) => {
+Command.code = async (client, interaction: CommandInteraction) => {
 
-  if (!interaction.guild_id) return respond({type: InteractionResponseType.ChannelMessageWithSource,
-    data: {content: 'DMs cannot have polls', flags: MessageFlags.EPHEMERAL}})
+  if (!interaction.guild) return interaction.reply({content: 'DMs cannot have polls', ephemeral: true})
   
   try {
     
-  const doc = db.collection('polls').doc(interaction.channel_id)
+  const doc = db.collection('polls').doc(interaction.channelId)
     
   const docx = await doc.get()
   
-  if(!docx.data()?.message) return respond({type: InteractionResponseType.ChannelMessageWithSource,
-    data: {content: 'Looks like there isn\'t a poll currently open.'}})
+  if(!docx.data()?.message) return interaction.reply("Looks like there isn't a poll currently open.")
         
-  const msg = await (client.channels.cache.get(interaction.channel_id) as TextChannel).messages.fetch(docx.data().message)
+  const msg = await interaction.channel.messages.fetch(docx.data().message)
   
   const votemsgs = [
     '', '', '',
@@ -40,16 +38,17 @@ Command.code = async (client, interaction: APIApplicationCommandGuildInteraction
   if(q.length > 243)
     q = q.slice(0, 239) + '...'
   
-  await respond({type: InteractionResponseType.ChannelMessageWithSource, data: {
+  await interaction.reply({
       embeds: [{
         title: `Poll Closed: ${q}`,
-        description: `<:yes:424361224675786752> Yes: ${msg.reactions.cache.get(yes).count-1}
-<:no:424361302069346304> No: ${msg.reactions.cache.get(no).count-1}
-[Poll Message](https://discord.com/channels/${interaction.guild_id}/${interaction.channel_id}/${msg.id})${votemsg}`
+        description: stripIndent`
+          <:yes:424361224675786752> Yes: ${msg.reactions.cache.get(yes).count-1}
+          <:no:424361302069346304> No: ${msg.reactions.cache.get(no).count-1}
+          [Poll Message](${msg.url})${votemsg}`
       }]
-    }})
+    })
   
-  await followup.send(`<@${interaction.member.user.id}> closed a poll`, {allowedMentions: {parse: []}})
+  await interaction.followUp({content: `<@${interaction.member.user.id}> closed a poll`, allowedMentions: {parse: []}})
   
   msg.unpin()
   
@@ -57,9 +56,10 @@ Command.code = async (client, interaction: APIApplicationCommandGuildInteraction
     
   } catch (e) {
   
-    followup.send(`There was an error closing the poll: ${e}
+    interaction.followUp(stripIndent`
+      There was an error closing the poll: ${e}
 
-To force close the active poll use \`yn.forceclose\`.`)
+      To force close the active poll use \`yn.forceclose\`.`)
     
   }
   

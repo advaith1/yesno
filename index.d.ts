@@ -1,6 +1,5 @@
 declare module 'sparkbots' {
-    import { ClientOptions, Snowflake, MessageEmbed, Client as DiscordClient, Message, WebhookClient, ClientEvents } from 'discord.js'
-    import { APIInteraction, APIInteractionResponse } from 'discord-api-types/v8'
+    import { ClientOptions, Snowflake, MessageEmbed, Client as DiscordClient, Message, ClientEvents, CommandInteraction } from 'discord.js'
     import DataStore from 'sparkbots/src/dataStore'
     import CustomConfig from 'sparkbots/src/CustomConfig'
 
@@ -26,7 +25,6 @@ declare module 'sparkbots' {
     const CustomConfig: CustomConfig
 
     function command(name: string): Command
-    type respond = (data: APIInteractionResponse) => Promise<void>
     interface Command {
         addAlias(name: string | string[]): void
         setDescription(description: string): void
@@ -36,7 +34,7 @@ declare module 'sparkbots' {
         disable(): void
         level: number
         name: string
-        code(client: Client, interaction: APIInteraction | Message, respond: respond, followup: WebhookClient): any
+        code(client: Client, interaction: CommandInteraction | Message): any
     }
 
     function observer(name: string): Observer
@@ -59,7 +57,7 @@ declare module 'sparkbots' {
         setLevel(level: number): void
         disable(): void
         level: number
-        code(client: Client, interaction: APIInteraction, message: Message): boolean
+        code(client: Client, interaction: CommandInteraction, message: Message): boolean
     }
 
     const snippet: any

@@ -29,7 +29,7 @@ Event.code = async (client, reaction: MessageReaction, user: User) => {
     
     const noVoters = await reaction.message.reactions.cache.get(no).users.fetch()
 
-    if(!noVoters.has(user.id)) reaction.message.channel.send(`${user} (${user.tag}) removed their vote`, {allowedMentions: {parse: []}})
+    if(!noVoters.has(user.id)) reaction.message.channel.send({content: `${user} (${user.tag}) removed their vote`, allowedMentions: {parse: []}})
   
   }
   
@@ -46,7 +46,7 @@ Event.code = async (client, reaction: MessageReaction, user: User) => {
     
     const yesVoters = await reaction.message.reactions.cache.get(yes).users.fetch()
 
-    if(!yesVoters.has(user.id)) reaction.message.channel.send(`${user} (${user.tag}) removed their vote`, {allowedMentions: {parse: []}})
+    if(!yesVoters.has(user.id)) reaction.message.channel.send({content: `${user} (${user.tag}) removed their vote`, allowedMentions: {parse: []}})
   
   }
   

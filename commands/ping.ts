@@ -1,15 +1,12 @@
 import {command} from 'sparkbots'
-import {SnowflakeUtil, TextChannel} from 'discord.js'
-import {APIApplicationCommandGuildInteraction, InteractionResponseType} from 'discord-api-types/v8'
+import {CommandInteraction} from 'discord.js'
 const Command = command('ping')
 Command.setLevel(0)
 Command.setDescription('Ping pong')
 export = Command
 
-Command.code = async (client, interaction: APIApplicationCommandGuildInteraction, respond) => {
-    await respond({type: InteractionResponseType.ChannelMessageWithSource, data: {content: 'Ping!'}})
-    const start = SnowflakeUtil.deconstruct(interaction.id).timestamp
-    const end = SnowflakeUtil.deconstruct((client.channels.cache.get(interaction.channel_id) as TextChannel).lastMessageID).timestamp
-    const edit = (text: string) => client.api.webhooks(client.config.applicationID, interaction.token).messages('@original').patch({data: {content: text}})
-    edit(`🏓 Pong! Took **${end - start}**ms.`)
+Command.code = async (client, interaction: CommandInteraction) => {
+    const reply = await interaction.defer({ fetchReply: true })
+    const responseTimestamp = 'createdTimestamp' in reply ? reply.createdTimestamp : new Date(reply.timestamp).getTime() // handle raw messages, for private threads
+    interaction.editReply(`🏓 Pong! Took **${responseTimestamp - interaction.createdTimestamp}**ms.`)
 }

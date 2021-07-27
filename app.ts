@@ -1,7 +1,8 @@
 const result = require('dotenv').config({path: __dirname + '/.env'})
 if (result.error) throw result.error
 
-import {start} from 'sparkbots'
+import { start } from 'sparkbots'
+import { Options } from 'discord.js'
 
 start({
   prefix: 'yn.',
@@ -9,12 +10,9 @@ start({
   token: process.env.TOKEN,
   clientOptions: {
     shards: 'auto',
-    messageCacheMaxSize: 10,
+    makeCache: Options.cacheWithLimits({MessageManager: 10}),
     partials: ['MESSAGE', 'REACTION', 'USER'],
-    ws: {
-      large_threshold: 50,
-      intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGES']
-    }
+    intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGES']
   }
 })
 

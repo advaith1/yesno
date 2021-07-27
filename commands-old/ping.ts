@@ -6,15 +6,12 @@ Command.allowDms(true)
 Command.setDescription('Ping pong')
 export = Command
 
-Command.code = (client, message: Message) => {
-    let start = new Date().getTime()
-    message.channel.send('Pinging...').then((message) => {
-        let end = new Date().getTime()
-        message.edit('🏓 Pong! Took **' + (end - start) + '**ms');
-    })
-  
+Command.code = async (client, message: Message) => {
+    const sent = await message.channel.send("Pinging...")
+    sent.edit(`🏓 Pong! Took **${sent.createdTimestamp - message.createdTimestamp}**ms.`)
+    
     // Permission check
-    if(message.guild && !message.guild.me.hasPermission('EMBED_LINKS')){
+    if(message.guild && !message.guild.me.permissions.has('EMBED_LINKS')){
         message.channel.send(':warning: I don\'t have the `Embed Links` permission! I need this to run most commands.')
     }
 }

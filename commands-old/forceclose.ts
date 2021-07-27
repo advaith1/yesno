@@ -14,11 +14,11 @@ Command.code = async (client, message: Message) => {
     
   const docx = await doc.get()
   
-  if(!docx.data()) return message.channel.send('Looks like there isn\'t a poll currently open.')
+  if(!docx.data()) return message.channel.send("Looks like there isn't a poll currently open.")
     
-  if(!docx.data().message) return message.channel.send('Looks like there isn\'t a poll currently open.')
+  if(!docx.data().message) return message.channel.send("Looks like there isn't a poll currently open.")
     
-  await message.channel.send(`${message.author} force closed a poll`, {allowedMentions: {parse: []}})
+  await message.channel.send({content: `${message.author} force closed a poll`, allowedMentions: {parse: []}})
   
   doc.delete()
   
