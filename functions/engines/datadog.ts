@@ -23,6 +23,6 @@ Engine.code = (client: Client) => {
   }
 
   setInterval(stats, 30000)
-  setInterval(polls, 1800000)
+  setInterval(polls, 21600000)
 
 }
