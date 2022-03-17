@@ -16,7 +16,7 @@ You can close a poll (which will unpin it and send the results) by using `/close
 
 ## YesNo Development
 
-YesNo uses [discord.js](https://discord.js.org) v12 ([Docs](https://discord.js.org/#/docs/main/master/general/welcome), [Repo](https://github.com/discordjs/discord.js)) and a fork of [Spark](https://sparkdocs.advaith.fun) ([Docs](https://sparkdocs.advaith.fun/documentation/intro), [Repo](https://github.com/advaith1/Spark-djs12)). [Cloud Firestore](https://firebase.google.com/products/firestore) is used for the database. YesNo uses TypeScript and Node.js v14.
+YesNo uses [discord.js](https://discord.js.org) v13 ([Docs](https://discord.js.org/#/docs/discord.js/stable/general/welcome), [Repo](https://github.com/discordjs/discord.js)) and a fork of [Spark](https://sparkdocs.advaith.fun) ([Docs](https://sparkdocs.advaith.fun/documentation/intro), [Repo](https://github.com/advaith1/Spark-djs12)). [Cloud Firestore](https://firebase.google.com/products/firestore) is used for the database. YesNo uses TypeScript and Node.js v16.
 
 Tokens are loaded from a `.env` file: `TOKEN` is the Discord bot token, `PORT` is the port that the webserver (`web.ts`) runs on, `DATADOG_API_KEY` is the Datadog API key, and the bot list tokens from `functions/engines/botlists.ts` are there.
 

@@ -19,3 +19,13 @@ start({
 import './web'
 
 console.log('Starting...')
+
+process.on('unhandledRejection', error => {
+  console.error('Unhandled promise rejection:')
+  console.error(error)
+})
+
+process.on('uncaughtException', error => {
+  console.error('Uncaught exception:')
+  console.error(error)
+})

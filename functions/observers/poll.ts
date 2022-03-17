@@ -1,5 +1,5 @@
 import {observer} from 'sparkbots'
-import {Message, DMChannel} from 'discord.js'
+import {Message} from 'discord.js'
 const Observer = observer("poll")
 
 import {db} from '../../db'
@@ -9,7 +9,7 @@ Observer.code = async (client, message: Message) => {
   
   if(message.content.startsWith('<@526189797711151114> ') || message.content.startsWith('<@!526189797711151114> ')) {
     
-    if(message.channel instanceof DMChannel) return message.channel.send('<:no:424361302069346304> You cannot create polls in DMs, please try it in a server.')
+    if(!message.inGuild()) return message.channel.send('<:no:424361302069346304> You cannot create polls in DMs, please try it in a server.')
 
     const doc = db.collection('polls').doc(message.channel.id)
     

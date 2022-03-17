@@ -1,4 +1,4 @@
-FROM node:14-buster
+FROM node:16
 WORKDIR /app
 COPY . .
 RUN apt update && apt install build-essential -y
