@@ -19,9 +19,9 @@ Command.code = async (client, message: Message) => {
 
         YesNo is super easy to use and requires no setup. To create a poll, mention the bot (\`@YesNo\`) and ask the question. For example: \`@YesNo is YesNo the best bot?\`. Polls will be pinned to the channel so people can easily find them.
 
-        You can close a poll (which will unpin it and send the results) by ${slashCommandsAdded ? 'using `/' : 'sending `yn.'}close\`.
+        You can close a poll (which will unpin it and send the results) by using </close:788287602235146240>.
 
-        To get YesNo update notifications delivered to this channel, ${slashCommandsAdded ? 'use `/' : 'send `yn.'}subscribe\`.
+        To get YesNo update notifications delivered to this channel, use </subscribe:788287922088050698>.
 
         YesNo now has [Slash Commands](https://support.discord.com/hc/en-us/articles/1500000368501)${slashCommandsAdded ? '! YesNo slash commands are already enabled for this server, type `/` to try them out!' : `, but they aren't enabled on this server yet! A server admin can [click here to enable them](https://discord.com/oauth2/authorize?client_id=526189797711151114&scope=applications.commands&guild_id=${message.guild.id}&disable_guild_select=true).` }
       ​`,

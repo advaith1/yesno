@@ -11,7 +11,7 @@ Engine.code = async (client) => {
     client.user.setPresence({
       status: 'online',
       activities: [{
-        name: `polls on ${client.guilds.cache.size} servers | yn.help`,
+        name: `polls on ${client.guilds.cache.size} servers`,
         type: 3,
       }]
     })
@@ -23,7 +23,7 @@ Engine.code = async (client) => {
   client.user.setPresence({
     status: 'idle',
     activities: [{
-      name: `polls [JUST RESTARTED] on ${client.guilds.cache.size} servers | yn.help`,
+      name: `polls [JUST RESTARTED] on ${client.guilds.cache.size} servers`,
       type: 3,
     }]
   })

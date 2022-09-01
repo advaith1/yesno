@@ -15,7 +15,7 @@ Observer.code = async (client, message: Message) => {
     
     const docx = await doc.get()
     
-    if(docx.data()) return message.channel.send('A poll is currently open. Use `/close` to close it.')
+    if(docx.data()) return message.channel.send('A poll is currently open. Use </close:788287602235146240> to close it.')
     
     if(!message.channel.permissionsFor(message.guild.me).has('ADD_REACTIONS')) throw message.channel.send('I need the Add Reactions permission!')
     if(!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) throw message.channel.send('I need the Embed Links permission!')

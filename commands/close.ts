@@ -59,7 +59,7 @@ Command.code = async (client, interaction: CommandInteraction) => {
     interaction.followUp(stripIndent`
       There was an error closing the poll: ${e}
 
-      To force close the active poll use \`yn.forceclose\`.`)
+      To force close the active poll use </forceclose:788287844056956950>.`)
     
   }
   

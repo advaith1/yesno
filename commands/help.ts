@@ -15,9 +15,9 @@ Command.code = async (client, interaction: CommandInteraction) => {
 
         YesNo is super easy to use and requires no setup. To create a poll, mention the bot (\`@YesNo\`) and ask the question. For example: \`@YesNo is YesNo the best bot?\`. Polls will be pinned to the channel so people can easily find them.
 
-        You can close a poll (which will unpin it and send the results) by using \`/close\`.
+        You can close a poll (which will unpin it and send the results) by using </close:788287602235146240>.
 
-        To get YesNo update notifications delivered to this channel, use \`/subscribe\`.`,
+        To get YesNo update notifications delivered to this channel, use </subscribe:788287922088050698>.`,
       color: 2041985,
       footer: {
         text: "The YesNo name, logo design, and concept are by Google. This bot is not affiliated with Google."
